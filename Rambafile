@@ -1,0 +1,21 @@
+### Headers settings
+company: Latynskii
+
+### Xcode project settings
+project_name: NASA-APIs
+xcodeproj_path: NASA-APIs.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: NASA-APIs
+
+
+# The file path for new modules
+project_file_path: NASA-APIs/Modules
+
+# The Xcode group path to new modules
+project_group_path: NASA-APIs/Modules
+
+### Templates
+templates:
+- {name: vip+c}

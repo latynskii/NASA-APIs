@@ -1,0 +1,14 @@
+final class {{ module_info.name }}Presenter: {{ module_info.name }}ModuleOutput {
+    var onFinished: (() -> Void)?
+    weak var view: {{ module_info.name }}ViewInput!
+    var interactor: {{ module_info.name }}InteractorInput!
+}
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {
+    func viewDidLoad() {
+    }
+}
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}InteractorOutput {
+
+}

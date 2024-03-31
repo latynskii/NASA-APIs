@@ -1,0 +1,28 @@
+import UIKit
+
+private struct Appearance {
+
+}
+
+final class {{ module_info.name }}ViewController: UIViewController {
+
+    var presenter: {{ module_info.name }}ViewOutput!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        addSubviews()
+        makeConstraints()
+        presenter.viewDidLoad()
+    }
+
+    private func addSubviews() {
+    }
+
+    private func makeConstraints() {
+    }
+}
+
+extension {{ module_info.name }}ViewController: {{ module_info.name }}ViewInput {
+
+}

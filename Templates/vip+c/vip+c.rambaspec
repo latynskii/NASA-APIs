@@ -1,0 +1,27 @@
+# Template information section
+name: "vip+c"
+summary: "vip+c"
+author: "Eduard Latynskii"
+version: "1.88"
+license: "nil"
+
+# The declarations for code files
+
+code_files:
+# View layer
+- {name: View/ViewInput.swift,  path: Code/View/view_input.swift.liquid}
+- {name: View/ViewController.swift, path: Code/View/viewcontroller.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+- {name: Presenter/InteractorOutput.swift, path: Code/Presenter/interactor_output.swift.liquid}
+- {name: Presenter/ViewOutput.swift, path: Code/Presenter/view_output.swift.liquid}
+
+# Interactor layer
+- {name: Interactor/InteractorInput.swift, path: Code/Interactor/interactor_input.swift.liquid}
+- {name: Interactor/Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
+
+
+# Assembly
+- {name: Assembly/Assembly.swift, path: Code/Assembly/assembly.swift.liquid}
+- {name: Assembly/ModuleOutput.swift, path: Code/Assembly/moduleOutput.swift.liquid}

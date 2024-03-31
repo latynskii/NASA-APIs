@@ -1,0 +1,18 @@
+import UIKit
+
+class {{ module_info.name }}Assembly {
+
+    static func assemble() -> (view: UIViewController, output: {{ module_info.name }}ModuleOutput) {
+        let view = {{ module_info.name }}ViewController()
+        let presenter = {{ module_info.name }}Presenter()
+        let interactor = {{ module_info.name }}Interactor()
+
+        view.presenter = presenter
+        presenter.view = view
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+
+        return (view, presenter)
+    }
+
+}
