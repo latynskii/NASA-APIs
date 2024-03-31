@@ -7,21 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		018BF0DAA77D07A0CBAD8B9C /* APIListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58894CAAD0DFD274B5A14A1 /* APIListInteractorOutput.swift */; };
+		1699631156A8CCB1C882D6C9 /* APIListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052696C85BDF3840C2C7BB2F /* APIListViewInput.swift */; };
 		23A75BBD2BB9756800DA276D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BBC2BB9756800DA276D /* AppDelegate.swift */; };
 		23A75BBF2BB9756800DA276D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BBE2BB9756800DA276D /* SceneDelegate.swift */; };
-		23A75BC12BB9756800DA276D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BC02BB9756800DA276D /* ViewController.swift */; };
 		23A75BC62BB9756900DA276D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A75BC52BB9756900DA276D /* Assets.xcassets */; };
 		23A75BC92BB9756900DA276D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A75BC72BB9756900DA276D /* LaunchScreen.storyboard */; };
+		23A75BD72BB9934C00DA276D /* BaseCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BD62BB9934C00DA276D /* BaseCoordinatorProtocol.swift */; };
+		23A75BDA2BB993A200DA276D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BD92BB993A200DA276D /* MainCoordinator.swift */; };
+		3B5B096A6BF78401C833E273 /* APIListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */; };
+		466C1CE6F2D170AA4CC8F31F /* APIListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C83A6E37181A58ED4223291 /* APIListPresenter.swift */; };
+		5695CD205D03263BEFABE6D1 /* APIListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E64887677CBC0D2751958 /* APIListViewController.swift */; };
+		7418CDCB40B41F917809AF77 /* APIListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2105377EBFDF45461C881B3 /* APIListAssembly.swift */; };
+		8AA9ABF266A247A5CA6AA830 /* APIListModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0152B8E504B4FBC2C21781 /* APIListModuleOutput.swift */; };
+		917B9A7A86A485B15BEAF1BB /* APIListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C989DF38802ECF09794E21D /* APIListInteractor.swift */; };
+		E3BE5580C90FCCA05442D98F /* APIListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCA99D0DA2E0826F052FCF /* APIListInteractorInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		052696C85BDF3840C2C7BB2F /* APIListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewInput.swift; sourceTree = "<group>"; };
 		23A75BB92BB9756800DA276D /* NASA-APIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA-APIs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A75BBC2BB9756800DA276D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A75BBE2BB9756800DA276D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		23A75BC02BB9756800DA276D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23A75BC52BB9756900DA276D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23A75BC82BB9756900DA276D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23A75BCA2BB9756900DA276D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23A75BD62BB9934C00DA276D /* BaseCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		23A75BD92BB993A200DA276D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewOutput.swift; sourceTree = "<group>"; };
+		7A3E64887677CBC0D2751958 /* APIListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewController.swift; sourceTree = "<group>"; };
+		8C83A6E37181A58ED4223291 /* APIListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListPresenter.swift; sourceTree = "<group>"; };
+		9C989DF38802ECF09794E21D /* APIListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListInteractor.swift; sourceTree = "<group>"; };
+		9D0152B8E504B4FBC2C21781 /* APIListModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListModuleOutput.swift; sourceTree = "<group>"; };
+		E1FCA99D0DA2E0826F052FCF /* APIListInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListInteractorInput.swift; sourceTree = "<group>"; };
+		F2105377EBFDF45461C881B3 /* APIListAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListAssembly.swift; sourceTree = "<group>"; };
+		F58894CAAD0DFD274B5A14A1 /* APIListInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListInteractorOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,7 @@
 				23A75BD52BB983CA00DA276D /* Modules */,
 				23A75BD42BB97B1500DA276D /* Sources */,
 				23A75BD32BB97B0300DA276D /* Storyboards */,
+				23A75BD82BB9935100DA276D /* Base */,
 			);
 			path = "NASA-APIs";
 			sourceTree = "<group>";
@@ -91,9 +112,66 @@
 		23A75BD52BB983CA00DA276D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				23A75BC02BB9756800DA276D /* ViewController.swift */,
+				2F09D86F58A3031B65A8EBD3 /* APIList */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		23A75BD82BB9935100DA276D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				23A75BD62BB9934C00DA276D /* BaseCoordinatorProtocol.swift */,
+				23A75BD92BB993A200DA276D /* MainCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2F09D86F58A3031B65A8EBD3 /* APIList */ = {
+			isa = PBXGroup;
+			children = (
+				E1555FC79CD52C5AA7911914 /* View */,
+				FD665F9AFECB34004B666BD4 /* Presenter */,
+				AD72575FD5209DD59AA6BB22 /* Interactor */,
+				B40BD3782532CC1C2F0CF37D /* Assembly */,
+			);
+			path = APIList;
+			sourceTree = "<group>";
+		};
+		AD72575FD5209DD59AA6BB22 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E1FCA99D0DA2E0826F052FCF /* APIListInteractorInput.swift */,
+				9C989DF38802ECF09794E21D /* APIListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B40BD3782532CC1C2F0CF37D /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F2105377EBFDF45461C881B3 /* APIListAssembly.swift */,
+				9D0152B8E504B4FBC2C21781 /* APIListModuleOutput.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		E1555FC79CD52C5AA7911914 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				052696C85BDF3840C2C7BB2F /* APIListViewInput.swift */,
+				7A3E64887677CBC0D2751958 /* APIListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD665F9AFECB34004B666BD4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8C83A6E37181A58ED4223291 /* APIListPresenter.swift */,
+				F58894CAAD0DFD274B5A14A1 /* APIListInteractorOutput.swift */,
+				2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +244,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23A75BC12BB9756800DA276D /* ViewController.swift in Sources */,
+				23A75BDA2BB993A200DA276D /* MainCoordinator.swift in Sources */,
+				23A75BD72BB9934C00DA276D /* BaseCoordinatorProtocol.swift in Sources */,
 				23A75BBD2BB9756800DA276D /* AppDelegate.swift in Sources */,
 				23A75BBF2BB9756800DA276D /* SceneDelegate.swift in Sources */,
+				1699631156A8CCB1C882D6C9 /* APIListViewInput.swift in Sources */,
+				5695CD205D03263BEFABE6D1 /* APIListViewController.swift in Sources */,
+				466C1CE6F2D170AA4CC8F31F /* APIListPresenter.swift in Sources */,
+				018BF0DAA77D07A0CBAD8B9C /* APIListInteractorOutput.swift in Sources */,
+				3B5B096A6BF78401C833E273 /* APIListViewOutput.swift in Sources */,
+				E3BE5580C90FCCA05442D98F /* APIListInteractorInput.swift in Sources */,
+				917B9A7A86A485B15BEAF1BB /* APIListInteractor.swift in Sources */,
+				7418CDCB40B41F917809AF77 /* APIListAssembly.swift in Sources */,
+				8AA9ABF266A247A5CA6AA830 /* APIListModuleOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

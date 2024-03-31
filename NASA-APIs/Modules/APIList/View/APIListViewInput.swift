@@ -1,0 +1,3 @@
+protocol APIListViewInput: AnyObject {
+
+}
