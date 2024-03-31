@@ -54,14 +54,46 @@
 		23A75BBB2BB9756800DA276D /* NASA-APIs */ = {
 			isa = PBXGroup;
 			children = (
-				23A75BBC2BB9756800DA276D /* AppDelegate.swift */,
-				23A75BBE2BB9756800DA276D /* SceneDelegate.swift */,
-				23A75BC02BB9756800DA276D /* ViewController.swift */,
-				23A75BC52BB9756900DA276D /* Assets.xcassets */,
-				23A75BC72BB9756900DA276D /* LaunchScreen.storyboard */,
-				23A75BCA2BB9756900DA276D /* Info.plist */,
+				23A75BD22BB97AB500DA276D /* Configs */,
+				23A75BD52BB983CA00DA276D /* Modules */,
+				23A75BD42BB97B1500DA276D /* Sources */,
+				23A75BD32BB97B0300DA276D /* Storyboards */,
 			);
 			path = "NASA-APIs";
+			sourceTree = "<group>";
+		};
+		23A75BD22BB97AB500DA276D /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				23A75BBC2BB9756800DA276D /* AppDelegate.swift */,
+				23A75BBE2BB9756800DA276D /* SceneDelegate.swift */,
+				23A75BCA2BB9756900DA276D /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		23A75BD32BB97B0300DA276D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				23A75BC72BB9756900DA276D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		23A75BD42BB97B1500DA276D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				23A75BC52BB9756900DA276D /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		23A75BD52BB983CA00DA276D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				23A75BC02BB9756800DA276D /* ViewController.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +314,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HW8W9HVMNK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "NASA-APIs/Info.plist";
+				INFOPLIST_FILE = "NASA-APIs/Configs/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -313,7 +345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HW8W9HVMNK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "NASA-APIs/Info.plist";
+				INFOPLIST_FILE = "NASA-APIs/Configs/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
