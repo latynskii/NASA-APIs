@@ -16,6 +16,8 @@
 		23A75BD72BB9934C00DA276D /* BaseCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BD62BB9934C00DA276D /* BaseCoordinatorProtocol.swift */; };
 		23A75BDA2BB993A200DA276D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BD92BB993A200DA276D /* MainCoordinator.swift */; };
 		23A75BF82BBA7CBE00DA276D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 23A75BF72BBA7CBE00DA276D /* SnapKit */; };
+		23A75C152BBAD20800DA276D /* APIListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75C142BBAD20800DA276D /* APIListCellModel.swift */; };
+		23A75C312BBADBB700DA276D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75C302BBADBB700DA276D /* BaseViewController.swift */; };
 		3B5B096A6BF78401C833E273 /* APIListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */; };
 		466C1CE6F2D170AA4CC8F31F /* APIListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C83A6E37181A58ED4223291 /* APIListPresenter.swift */; };
 		5695CD205D03263BEFABE6D1 /* APIListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E64887677CBC0D2751958 /* APIListViewController.swift */; };
@@ -35,6 +37,8 @@
 		23A75BCA2BB9756900DA276D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23A75BD62BB9934C00DA276D /* BaseCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		23A75BD92BB993A200DA276D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		23A75C142BBAD20800DA276D /* APIListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIListCellModel.swift; sourceTree = "<group>"; };
+		23A75C302BBADBB700DA276D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewOutput.swift; sourceTree = "<group>"; };
 		7A3E64887677CBC0D2751958 /* APIListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewController.swift; sourceTree = "<group>"; };
 		8C83A6E37181A58ED4223291 /* APIListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListPresenter.swift; sourceTree = "<group>"; };
@@ -124,8 +128,17 @@
 			children = (
 				23A75BD62BB9934C00DA276D /* BaseCoordinatorProtocol.swift */,
 				23A75BD92BB993A200DA276D /* MainCoordinator.swift */,
+				23A75C302BBADBB700DA276D /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		23A75C162BBAD22000DA276D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23A75C142BBAD20800DA276D /* APIListCellModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2F09D86F58A3031B65A8EBD3 /* APIList */ = {
@@ -135,6 +148,7 @@
 				FD665F9AFECB34004B666BD4 /* Presenter */,
 				AD72575FD5209DD59AA6BB22 /* Interactor */,
 				B40BD3782532CC1C2F0CF37D /* Assembly */,
+				23A75C162BBAD22000DA276D /* Models */,
 			);
 			path = APIList;
 			sourceTree = "<group>";
@@ -252,10 +266,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A75C152BBAD20800DA276D /* APIListCellModel.swift in Sources */,
 				23A75BDA2BB993A200DA276D /* MainCoordinator.swift in Sources */,
 				23A75BD72BB9934C00DA276D /* BaseCoordinatorProtocol.swift in Sources */,
 				23A75BBD2BB9756800DA276D /* AppDelegate.swift in Sources */,
 				23A75BBF2BB9756800DA276D /* SceneDelegate.swift in Sources */,
+				23A75C312BBADBB700DA276D /* BaseViewController.swift in Sources */,
 				1699631156A8CCB1C882D6C9 /* APIListViewInput.swift in Sources */,
 				5695CD205D03263BEFABE6D1 /* APIListViewController.swift in Sources */,
 				466C1CE6F2D170AA4CC8F31F /* APIListPresenter.swift in Sources */,

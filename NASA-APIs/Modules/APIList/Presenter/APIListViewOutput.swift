@@ -1,3 +1,3 @@
 protocol APIListViewOutput: AnyObject {
-    func viewDidLoad()
+    func getDataSource() -> [APIListCellModel]
 }

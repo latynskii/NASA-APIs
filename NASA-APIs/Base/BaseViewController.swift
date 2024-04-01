@@ -1,0 +1,45 @@
+
+import UIKit
+
+private struct Appearance {
+    static let navigationBarBigTitleFont: UIFont = .init(name: "Apple SD Gothic Neo Bold", size: 30) ?? .systemFont(ofSize: 30)
+    static let navigationBarRegularTitleFont: UIFont = .init(name: "Apple SD Gothic Neo Bold", size: 18) ?? .systemFont(ofSize: 18)
+    static let navigationBarBackgroundColor: UIColor = .blue
+    static let navigationBarForegroundColor: UIColor = .white
+}
+
+class BaseViewController: UIViewController {
+
+    private var configuredWithLargeTitle: Bool = false
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    func setupBigTitle() {
+        setupBigTitleNavigationBar()
+        configuredWithLargeTitle = true
+    }
+}
+
+private extension BaseViewController {
+    func setupBigTitleNavigationBar() {
+        let bigTitleAppearance = UINavigationBarAppearance()
+        bigTitleAppearance.backgroundColor = Appearance.navigationBarBackgroundColor
+        bigTitleAppearance.largeTitleTextAttributes = [
+            .foregroundColor: Appearance.navigationBarForegroundColor,
+            .font: Appearance.navigationBarBigTitleFont
+        ]
+        let regularAttributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: Appearance.navigationBarForegroundColor,
+        ]
+        bigTitleAppearance.titleTextAttributes = regularAttributes
+        let compactAppearance = UINavigationBarAppearance()
+        compactAppearance.backgroundColor = Appearance.navigationBarBackgroundColor
+        compactAppearance.titleTextAttributes = regularAttributes
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.scrollEdgeAppearance = bigTitleAppearance // big navigation bar appearance
+        navigationController?.navigationBar.standardAppearance = compactAppearance // standard navigation bar appearance
+    }
+}

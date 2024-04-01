@@ -5,7 +5,11 @@ final class APIListPresenter: APIListModuleOutput {
 }
 
 extension APIListPresenter: APIListViewOutput {
-    func viewDidLoad() {
+    func getDataSource() -> [APIListCellModel] {
+        [
+            .init(title: "PODs API", type: .apods),
+            .init(title: "Asteroids API", type: .asteroids)
+        ]
     }
 }
 
