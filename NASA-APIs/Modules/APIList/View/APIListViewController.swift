@@ -28,6 +28,7 @@ final class APIListViewController: BaseViewController {
         makeConstraints()
         setupBigTitle()
         title = "NASA APIs"
+        view.backgroundColor = Appearance.backgroundColor
     }
 
     private func addSubviews() {
@@ -46,7 +47,7 @@ extension APIListViewController: APIListViewInput {
 
 extension APIListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter.getDataSource().count
+        presenter.dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,9 +55,15 @@ extension APIListViewController: UITableViewDelegate, UITableViewDataSource {
         var configuration = cell.defaultContentConfiguration()
         configuration.textProperties.font = Appearance.cellTitleFont
         configuration.textProperties.color = Appearance.cellTitleColor
-        let data = presenter.getDataSource()[indexPath.row]
+        let data = presenter.dataSource[indexPath.row]
         configuration.text = data.title
         cell.contentConfiguration = configuration
+        cell.backgroundColor = Appearance.backgroundColor
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        presenter.didSelectRow(with: indexPath.row)
     }
 }

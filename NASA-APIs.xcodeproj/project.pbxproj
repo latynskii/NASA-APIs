@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		018BF0DAA77D07A0CBAD8B9C /* APIListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58894CAAD0DFD274B5A14A1 /* APIListInteractorOutput.swift */; };
+		0AD2DA0806923800476DF3F2 /* APODsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62B611A603FFA4E2B3EF527 /* APODsAssembly.swift */; };
 		1699631156A8CCB1C882D6C9 /* APIListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052696C85BDF3840C2C7BB2F /* APIListViewInput.swift */; };
 		23A75BBD2BB9756800DA276D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BBC2BB9756800DA276D /* AppDelegate.swift */; };
 		23A75BBF2BB9756800DA276D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BBE2BB9756800DA276D /* SceneDelegate.swift */; };
@@ -18,17 +19,27 @@
 		23A75BF82BBA7CBE00DA276D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 23A75BF72BBA7CBE00DA276D /* SnapKit */; };
 		23A75C152BBAD20800DA276D /* APIListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75C142BBAD20800DA276D /* APIListCellModel.swift */; };
 		23A75C312BBADBB700DA276D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75C302BBADBB700DA276D /* BaseViewController.swift */; };
+		23A75C332BBAE0C300DA276D /* APODsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75C322BBAE0C300DA276D /* APODsCoordinator.swift */; };
 		3B5B096A6BF78401C833E273 /* APIListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */; };
+		41B272E6471878F3D7FE49B7 /* APODsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7ACE40A2AFCD11C23C207 /* APODsPresenter.swift */; };
 		466C1CE6F2D170AA4CC8F31F /* APIListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C83A6E37181A58ED4223291 /* APIListPresenter.swift */; };
 		5695CD205D03263BEFABE6D1 /* APIListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E64887677CBC0D2751958 /* APIListViewController.swift */; };
+		5F235E029FB909BA5455FCA5 /* APODsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D845D687C6C97F38FA378CF /* APODsInteractor.swift */; };
 		7418CDCB40B41F917809AF77 /* APIListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2105377EBFDF45461C881B3 /* APIListAssembly.swift */; };
 		8AA9ABF266A247A5CA6AA830 /* APIListModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0152B8E504B4FBC2C21781 /* APIListModuleOutput.swift */; };
+		8B90AE306C5C14C845E5DFCB /* APODsModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F747E3ECF90E41498B5973 /* APODsModuleOutput.swift */; };
 		917B9A7A86A485B15BEAF1BB /* APIListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C989DF38802ECF09794E21D /* APIListInteractor.swift */; };
+		B767420D20D21B46363E3970 /* APODsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C61D782A63D181CF493D64 /* APODsInteractorInput.swift */; };
+		C5217B7D546EFE406C6879B3 /* APODsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0618CD7C89E6A89FA2576E9 /* APODsViewController.swift */; };
+		D308F3490B91FF108B1048A8 /* APODsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE26B841BA100C21076B4B7 /* APODsInteractorOutput.swift */; };
+		D698DD4ED67FE023B6F72201 /* APODsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F183C1653D1A16B9ECD8878F /* APODsViewInput.swift */; };
 		E3BE5580C90FCCA05442D98F /* APIListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCA99D0DA2E0826F052FCF /* APIListInteractorInput.swift */; };
+		E83C101BCE7C58F3EE284CF8 /* APODsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068A5E937C54A1353E64E480 /* APODsViewOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		052696C85BDF3840C2C7BB2F /* APIListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewInput.swift; sourceTree = "<group>"; };
+		068A5E937C54A1353E64E480 /* APODsViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsViewOutput.swift; sourceTree = "<group>"; };
 		23A75BB92BB9756800DA276D /* NASA-APIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA-APIs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A75BBC2BB9756800DA276D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A75BBE2BB9756800DA276D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,14 +50,23 @@
 		23A75BD92BB993A200DA276D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		23A75C142BBAD20800DA276D /* APIListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIListCellModel.swift; sourceTree = "<group>"; };
 		23A75C302BBADBB700DA276D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		23A75C322BBAE0C300DA276D /* APODsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsCoordinator.swift; sourceTree = "<group>"; };
 		2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewOutput.swift; sourceTree = "<group>"; };
+		4EE7ACE40A2AFCD11C23C207 /* APODsPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsPresenter.swift; sourceTree = "<group>"; };
+		76C61D782A63D181CF493D64 /* APODsInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsInteractorInput.swift; sourceTree = "<group>"; };
 		7A3E64887677CBC0D2751958 /* APIListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewController.swift; sourceTree = "<group>"; };
 		8C83A6E37181A58ED4223291 /* APIListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListPresenter.swift; sourceTree = "<group>"; };
+		8D845D687C6C97F38FA378CF /* APODsInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsInteractor.swift; sourceTree = "<group>"; };
 		9C989DF38802ECF09794E21D /* APIListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListInteractor.swift; sourceTree = "<group>"; };
 		9D0152B8E504B4FBC2C21781 /* APIListModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListModuleOutput.swift; sourceTree = "<group>"; };
+		A0618CD7C89E6A89FA2576E9 /* APODsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsViewController.swift; sourceTree = "<group>"; };
 		E1FCA99D0DA2E0826F052FCF /* APIListInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListInteractorInput.swift; sourceTree = "<group>"; };
+		E8F747E3ECF90E41498B5973 /* APODsModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsModuleOutput.swift; sourceTree = "<group>"; };
+		F183C1653D1A16B9ECD8878F /* APODsViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsViewInput.swift; sourceTree = "<group>"; };
 		F2105377EBFDF45461C881B3 /* APIListAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListAssembly.swift; sourceTree = "<group>"; };
 		F58894CAAD0DFD274B5A14A1 /* APIListInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListInteractorOutput.swift; sourceTree = "<group>"; };
+		F62B611A603FFA4E2B3EF527 /* APODsAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsAssembly.swift; sourceTree = "<group>"; };
+		FFE26B841BA100C21076B4B7 /* APODsInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsInteractorOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1629D8E04B358DD509C22302 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F62B611A603FFA4E2B3EF527 /* APODsAssembly.swift */,
+				E8F747E3ECF90E41498B5973 /* APODsModuleOutput.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		23A75BB02BB9756800DA276D = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				2F09D86F58A3031B65A8EBD3 /* APIList */,
+				83EEB33B3271BDAB5572ABF6 /* APODs */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -141,6 +171,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		23A75C392BBAF51600DA276D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				23A75C322BBAE0C300DA276D /* APODsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2E5A871FD9B730582ED8C9C2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				76C61D782A63D181CF493D64 /* APODsInteractorInput.swift */,
+				8D845D687C6C97F38FA378CF /* APODsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		2F09D86F58A3031B65A8EBD3 /* APIList */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +198,28 @@
 				23A75C162BBAD22000DA276D /* Models */,
 			);
 			path = APIList;
+			sourceTree = "<group>";
+		};
+		83EEB33B3271BDAB5572ABF6 /* APODs */ = {
+			isa = PBXGroup;
+			children = (
+				D20D2287E4D6D12ED9EFD4EE /* View */,
+				998CE14DD2954B9569A578D2 /* Presenter */,
+				2E5A871FD9B730582ED8C9C2 /* Interactor */,
+				1629D8E04B358DD509C22302 /* Assembly */,
+				23A75C392BBAF51600DA276D /* Coordinator */,
+			);
+			path = APODs;
+			sourceTree = "<group>";
+		};
+		998CE14DD2954B9569A578D2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7ACE40A2AFCD11C23C207 /* APODsPresenter.swift */,
+				FFE26B841BA100C21076B4B7 /* APODsInteractorOutput.swift */,
+				068A5E937C54A1353E64E480 /* APODsViewOutput.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		AD72575FD5209DD59AA6BB22 /* Interactor */ = {
@@ -169,6 +238,15 @@
 				9D0152B8E504B4FBC2C21781 /* APIListModuleOutput.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		D20D2287E4D6D12ED9EFD4EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F183C1653D1A16B9ECD8878F /* APODsViewInput.swift */,
+				A0618CD7C89E6A89FA2576E9 /* APODsViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E1555FC79CD52C5AA7911914 /* View */ = {
@@ -274,6 +352,7 @@
 				23A75C312BBADBB700DA276D /* BaseViewController.swift in Sources */,
 				1699631156A8CCB1C882D6C9 /* APIListViewInput.swift in Sources */,
 				5695CD205D03263BEFABE6D1 /* APIListViewController.swift in Sources */,
+				23A75C332BBAE0C300DA276D /* APODsCoordinator.swift in Sources */,
 				466C1CE6F2D170AA4CC8F31F /* APIListPresenter.swift in Sources */,
 				018BF0DAA77D07A0CBAD8B9C /* APIListInteractorOutput.swift in Sources */,
 				3B5B096A6BF78401C833E273 /* APIListViewOutput.swift in Sources */,
@@ -281,6 +360,15 @@
 				917B9A7A86A485B15BEAF1BB /* APIListInteractor.swift in Sources */,
 				7418CDCB40B41F917809AF77 /* APIListAssembly.swift in Sources */,
 				8AA9ABF266A247A5CA6AA830 /* APIListModuleOutput.swift in Sources */,
+				D698DD4ED67FE023B6F72201 /* APODsViewInput.swift in Sources */,
+				C5217B7D546EFE406C6879B3 /* APODsViewController.swift in Sources */,
+				41B272E6471878F3D7FE49B7 /* APODsPresenter.swift in Sources */,
+				D308F3490B91FF108B1048A8 /* APODsInteractorOutput.swift in Sources */,
+				E83C101BCE7C58F3EE284CF8 /* APODsViewOutput.swift in Sources */,
+				B767420D20D21B46363E3970 /* APODsInteractorInput.swift in Sources */,
+				5F235E029FB909BA5455FCA5 /* APODsInteractor.swift in Sources */,
+				0AD2DA0806923800476DF3F2 /* APODsAssembly.swift in Sources */,
+				8B90AE306C5C14C845E5DFCB /* APODsModuleOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

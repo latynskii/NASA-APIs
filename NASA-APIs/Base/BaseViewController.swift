@@ -37,8 +37,10 @@ private extension BaseViewController {
         let compactAppearance = UINavigationBarAppearance()
         compactAppearance.backgroundColor = Appearance.navigationBarBackgroundColor
         compactAppearance.titleTextAttributes = regularAttributes
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.scrollEdgeAppearance = bigTitleAppearance // big navigation bar appearance
         navigationController?.navigationBar.standardAppearance = compactAppearance // standard navigation bar appearance
     }

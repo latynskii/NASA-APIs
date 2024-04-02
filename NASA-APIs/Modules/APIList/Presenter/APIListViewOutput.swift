@@ -1,3 +1,4 @@
 protocol APIListViewOutput: AnyObject {
-    func getDataSource() -> [APIListCellModel]
+    var dataSource: [APIListCellModel] { get }
+    func didSelectRow(with index: Int)
 }
