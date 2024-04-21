@@ -10,6 +10,13 @@
 		018BF0DAA77D07A0CBAD8B9C /* APIListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58894CAAD0DFD274B5A14A1 /* APIListInteractorOutput.swift */; };
 		0AD2DA0806923800476DF3F2 /* APODsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62B611A603FFA4E2B3EF527 /* APODsAssembly.swift */; };
 		1699631156A8CCB1C882D6C9 /* APIListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052696C85BDF3840C2C7BB2F /* APIListViewInput.swift */; };
+		232753752BC6AAB70036A15E /* APODsCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232753742BC6AAB70036A15E /* APODsCollectionViewManager.swift */; };
+		232753922BC6C4770036A15E /* APODsSelectDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232753912BC6C4770036A15E /* APODsSelectDateCell.swift */; };
+		232753942BC6DF960036A15E /* APODsCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232753932BC6DF960036A15E /* APODsCollectionHeaderView.swift */; };
+		232753982BC7C2320036A15E /* APODsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232753972BC7C2320036A15E /* APODsSection.swift */; };
+		2327539C2BC7C2C00036A15E /* APODsCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327539B2BC7C2C00036A15E /* APODsCellItem.swift */; };
+		2327539E2BC807960036A15E /* APODsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327539D2BC807960036A15E /* APODsDataProvider.swift */; };
+		236803BB2BD2B917005312C2 /* APODCustomDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236803BA2BD2B917005312C2 /* APODCustomDateCell.swift */; };
 		23A75BBD2BB9756800DA276D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BBC2BB9756800DA276D /* AppDelegate.swift */; };
 		23A75BBF2BB9756800DA276D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BBE2BB9756800DA276D /* SceneDelegate.swift */; };
 		23A75BC62BB9756900DA276D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A75BC52BB9756900DA276D /* Assets.xcassets */; };
@@ -40,6 +47,13 @@
 /* Begin PBXFileReference section */
 		052696C85BDF3840C2C7BB2F /* APIListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewInput.swift; sourceTree = "<group>"; };
 		068A5E937C54A1353E64E480 /* APODsViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsViewOutput.swift; sourceTree = "<group>"; };
+		232753742BC6AAB70036A15E /* APODsCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsCollectionViewManager.swift; sourceTree = "<group>"; };
+		232753912BC6C4770036A15E /* APODsSelectDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsSelectDateCell.swift; sourceTree = "<group>"; };
+		232753932BC6DF960036A15E /* APODsCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsCollectionHeaderView.swift; sourceTree = "<group>"; };
+		232753972BC7C2320036A15E /* APODsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsSection.swift; sourceTree = "<group>"; };
+		2327539B2BC7C2C00036A15E /* APODsCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsCellItem.swift; sourceTree = "<group>"; };
+		2327539D2BC807960036A15E /* APODsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsDataProvider.swift; sourceTree = "<group>"; };
+		236803BA2BD2B917005312C2 /* APODCustomDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODCustomDateCell.swift; sourceTree = "<group>"; };
 		23A75BB92BB9756800DA276D /* NASA-APIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA-APIs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A75BBC2BB9756800DA276D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A75BBE2BB9756800DA276D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +102,52 @@
 				E8F747E3ECF90E41498B5973 /* APODsModuleOutput.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		232753762BC6AAED0036A15E /* CollectionManager */ = {
+			isa = PBXGroup;
+			children = (
+				232753992BC7C24F0036A15E /* Models */,
+				232753952BC7BD8E0036A15E /* Cells */,
+				232753962BC7C2140036A15E /* Manager */,
+				2327539F2BC808210036A15E /* DataProvider */,
+			);
+			path = CollectionManager;
+			sourceTree = "<group>";
+		};
+		232753952BC7BD8E0036A15E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				232753912BC6C4770036A15E /* APODsSelectDateCell.swift */,
+				232753932BC6DF960036A15E /* APODsCollectionHeaderView.swift */,
+				236803BA2BD2B917005312C2 /* APODCustomDateCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		232753962BC7C2140036A15E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				232753742BC6AAB70036A15E /* APODsCollectionViewManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		232753992BC7C24F0036A15E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				232753972BC7C2320036A15E /* APODsSection.swift */,
+				2327539B2BC7C2C00036A15E /* APODsCellItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2327539F2BC808210036A15E /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				2327539D2BC807960036A15E /* APODsDataProvider.swift */,
+			);
+			path = DataProvider;
 			sourceTree = "<group>";
 		};
 		23A75BB02BB9756800DA276D = {
@@ -203,6 +263,7 @@
 		83EEB33B3271BDAB5572ABF6 /* APODs */ = {
 			isa = PBXGroup;
 			children = (
+				232753762BC6AAED0036A15E /* CollectionManager */,
 				D20D2287E4D6D12ED9EFD4EE /* View */,
 				998CE14DD2954B9569A578D2 /* Presenter */,
 				2E5A871FD9B730582ED8C9C2 /* Interactor */,
@@ -344,18 +405,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232753982BC7C2320036A15E /* APODsSection.swift in Sources */,
 				23A75C152BBAD20800DA276D /* APIListCellModel.swift in Sources */,
 				23A75BDA2BB993A200DA276D /* MainCoordinator.swift in Sources */,
 				23A75BD72BB9934C00DA276D /* BaseCoordinatorProtocol.swift in Sources */,
+				2327539C2BC7C2C00036A15E /* APODsCellItem.swift in Sources */,
 				23A75BBD2BB9756800DA276D /* AppDelegate.swift in Sources */,
 				23A75BBF2BB9756800DA276D /* SceneDelegate.swift in Sources */,
 				23A75C312BBADBB700DA276D /* BaseViewController.swift in Sources */,
 				1699631156A8CCB1C882D6C9 /* APIListViewInput.swift in Sources */,
 				5695CD205D03263BEFABE6D1 /* APIListViewController.swift in Sources */,
 				23A75C332BBAE0C300DA276D /* APODsCoordinator.swift in Sources */,
+				232753942BC6DF960036A15E /* APODsCollectionHeaderView.swift in Sources */,
 				466C1CE6F2D170AA4CC8F31F /* APIListPresenter.swift in Sources */,
 				018BF0DAA77D07A0CBAD8B9C /* APIListInteractorOutput.swift in Sources */,
 				3B5B096A6BF78401C833E273 /* APIListViewOutput.swift in Sources */,
+				2327539E2BC807960036A15E /* APODsDataProvider.swift in Sources */,
+				236803BB2BD2B917005312C2 /* APODCustomDateCell.swift in Sources */,
 				E3BE5580C90FCCA05442D98F /* APIListInteractorInput.swift in Sources */,
 				917B9A7A86A485B15BEAF1BB /* APIListInteractor.swift in Sources */,
 				7418CDCB40B41F917809AF77 /* APIListAssembly.swift in Sources */,
@@ -363,7 +429,9 @@
 				D698DD4ED67FE023B6F72201 /* APODsViewInput.swift in Sources */,
 				C5217B7D546EFE406C6879B3 /* APODsViewController.swift in Sources */,
 				41B272E6471878F3D7FE49B7 /* APODsPresenter.swift in Sources */,
+				232753922BC6C4770036A15E /* APODsSelectDateCell.swift in Sources */,
 				D308F3490B91FF108B1048A8 /* APODsInteractorOutput.swift in Sources */,
+				232753752BC6AAB70036A15E /* APODsCollectionViewManager.swift in Sources */,
 				E83C101BCE7C58F3EE284CF8 /* APODsViewOutput.swift in Sources */,
 				B767420D20D21B46363E3970 /* APODsInteractorInput.swift in Sources */,
 				5F235E029FB909BA5455FCA5 /* APODsInteractor.swift in Sources */,
