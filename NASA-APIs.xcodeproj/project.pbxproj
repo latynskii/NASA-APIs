@@ -17,6 +17,8 @@
 		2327539C2BC7C2C00036A15E /* APODsCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327539B2BC7C2C00036A15E /* APODsCellItem.swift */; };
 		2327539E2BC807960036A15E /* APODsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327539D2BC807960036A15E /* APODsDataProvider.swift */; };
 		236803BB2BD2B917005312C2 /* APODCustomDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236803BA2BD2B917005312C2 /* APODCustomDateCell.swift */; };
+		236803C02BD59CD6005312C2 /* MainImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236803BF2BD59CD6005312C2 /* MainImageCell.swift */; };
+		236803C32BD5A0E8005312C2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 236803C22BD5A0E8005312C2 /* Kingfisher */; };
 		23A75BBD2BB9756800DA276D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BBC2BB9756800DA276D /* AppDelegate.swift */; };
 		23A75BBF2BB9756800DA276D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BBE2BB9756800DA276D /* SceneDelegate.swift */; };
 		23A75BC62BB9756900DA276D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A75BC52BB9756900DA276D /* Assets.xcassets */; };
@@ -54,6 +56,7 @@
 		2327539B2BC7C2C00036A15E /* APODsCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsCellItem.swift; sourceTree = "<group>"; };
 		2327539D2BC807960036A15E /* APODsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsDataProvider.swift; sourceTree = "<group>"; };
 		236803BA2BD2B917005312C2 /* APODCustomDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODCustomDateCell.swift; sourceTree = "<group>"; };
+		236803BF2BD59CD6005312C2 /* MainImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainImageCell.swift; sourceTree = "<group>"; };
 		23A75BB92BB9756800DA276D /* NASA-APIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA-APIs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A75BBC2BB9756800DA276D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A75BBE2BB9756800DA276D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236803C32BD5A0E8005312C2 /* Kingfisher in Frameworks */,
 				23A75BF82BBA7CBE00DA276D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +125,7 @@
 				232753912BC6C4770036A15E /* APODsSelectDateCell.swift */,
 				232753932BC6DF960036A15E /* APODsCollectionHeaderView.swift */,
 				236803BA2BD2B917005312C2 /* APODCustomDateCell.swift */,
+				236803BF2BD59CD6005312C2 /* MainImageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 			name = "NASA-APIs";
 			packageProductDependencies = (
 				23A75BF72BBA7CBE00DA276D /* SnapKit */,
+				236803C22BD5A0E8005312C2 /* Kingfisher */,
 			);
 			productName = "NASA-APIs";
 			productReference = 23A75BB92BB9756800DA276D /* NASA-APIs.app */;
@@ -378,6 +384,7 @@
 			mainGroup = 23A75BB02BB9756800DA276D;
 			packageReferences = (
 				23A75BF62BBA7CBE00DA276D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				236803C12BD5A0E8005312C2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 23A75BBA2BB9756800DA276D /* Products */;
 			projectDirPath = "";
@@ -405,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236803C02BD59CD6005312C2 /* MainImageCell.swift in Sources */,
 				232753982BC7C2320036A15E /* APODsSection.swift in Sources */,
 				23A75C152BBAD20800DA276D /* APIListCellModel.swift in Sources */,
 				23A75BDA2BB993A200DA276D /* MainCoordinator.swift in Sources */,
@@ -659,6 +667,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		236803C12BD5A0E8005312C2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 		23A75BF62BBA7CBE00DA276D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -670,6 +686,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		236803C22BD5A0E8005312C2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 236803C12BD5A0E8005312C2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		23A75BF72BBA7CBE00DA276D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 23A75BF62BBA7CBE00DA276D /* XCRemoteSwiftPackageReference "SnapKit" */;

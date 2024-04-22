@@ -8,6 +8,7 @@ struct APODsCellItem: Hashable {
 
 enum APODsItemType: Hashable {
     case dataSelectItemType(type: APODsDateSelectItemModel)
+    case imageItemType(type: APODsImageItemModel)
 }
 
 struct APODsDateSelectItemModel: Hashable {
@@ -20,6 +21,12 @@ struct APODsDateSelectItemModel: Hashable {
         self.type = type
         self.selected = selected
     }
+}
+
+struct APODsImageItemModel: Hashable {
+    let id = UUID()
+    let title: String
+    let imageUrl: URL?
 }
 
 

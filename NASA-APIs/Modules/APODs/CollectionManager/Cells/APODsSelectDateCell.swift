@@ -5,29 +5,11 @@ private struct Appearance {
     static let titleFont: UIFont = .init(name: "Apple SD Gothic Neo Bold", size: 13) ?? .systemFont(ofSize: 13)
     static let titleColor: UIColor = .black
     static let selectedTitleColor: UIColor = .white
-
 }
 
 final class APODsSelectDateCell: UICollectionViewCell {
 
     static let identifier = "APODsSelectDateCell"
-
-    override var isSelected: Bool {
-        didSet {
-            if self.isSelected {
-                UIView.animate(withDuration: 0.3) { // for animation effect
-                    self.contentView.backgroundColor = .black
-                    self.titleLabel.textColor = Appearance.selectedTitleColor
-                }
-            }
-            else {
-                UIView.animate(withDuration: 0.3) { // for animation effect
-                    self.contentView.backgroundColor = .white
-                    self.titleLabel.textColor = Appearance.titleColor
-                }
-            }
-        }
-    }
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -68,5 +50,15 @@ final class APODsSelectDateCell: UICollectionViewCell {
 
     func setup(title: String, isSelected: Bool = false) {
         titleLabel.text = title
+    }
+
+    func selectCell() {
+        self.contentView.backgroundColor = .black
+        self.titleLabel.textColor = Appearance.selectedTitleColor
+    }
+
+    func unselectCell() {
+        self.contentView.backgroundColor = .white
+        self.titleLabel.textColor = Appearance.titleColor
     }
 }

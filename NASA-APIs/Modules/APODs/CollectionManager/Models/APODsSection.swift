@@ -10,4 +10,5 @@ struct APODsSection: Identifiable, Hashable {
 
 enum APODsSectionType: Int {
     case dataSelectType
+    case pictures
 }

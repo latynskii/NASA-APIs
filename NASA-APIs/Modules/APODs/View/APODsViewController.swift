@@ -54,7 +54,11 @@ extension APODsViewController: APODsViewInput {
         collectionManagerInput.appendDateSelection(section)
     }
 
-    func reloadDateSelect(section: APODsSection) {
-//        collectionManagerInput.updateDateSelectionSection(section)
+    func setPictures(section: APODsSection) {
+        collectionManagerInput.appendPicturesSection(section)
+    }
+
+    func dateCellTapped(indexPath: IndexPath, selected: Bool) {
+        collectionManagerInput.dateCellPicked(with: indexPath, selected: selected)
     }
 }

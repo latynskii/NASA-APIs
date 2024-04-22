@@ -1,3 +1,4 @@
+import Foundation
 final class APIListPresenter: APIListModuleOutput {
     var onFinished: (() -> Void)?
     var onOpenAPODs: (() -> Void?)?

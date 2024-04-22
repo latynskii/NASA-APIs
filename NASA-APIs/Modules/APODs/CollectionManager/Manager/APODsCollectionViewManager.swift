@@ -5,6 +5,8 @@ protocol APODsCollectionViewManagerInput: AnyObject {
     func connect(with collectionView: UICollectionView)
     func appendDateSelection(_ section: APODsSection)
     func customDateCellPicked(from: String, to: String, selected: Bool)
+    func appendPicturesSection(_ section: APODsSection)
+    func dateCellPicked(with indexPath: IndexPath, selected: Bool)
 }
 
 private extension APODsCollectionViewManager {
@@ -17,7 +19,7 @@ private extension APODsCollectionViewManager {
 }
 
 protocol APODsCollectionViewManagerDelegate: AnyObject {
-    func cellTapped(section: APODsSection, item: APODsCellItem)
+    func cellTapped(item: APODsCellItem, indexPath: IndexPath)
 }
 
 final class APODsCollectionViewManager: NSObject {
@@ -41,7 +43,7 @@ final class APODsCollectionViewManager: NSObject {
                 return nil
             }
             switch section.type {
-            case .dataSelectType:
+            case .dataSelectType, .pictures:
                 guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(
                     ofKind: kind,
                     withReuseIdentifier: APODsCollectionHeaderView.identifier,
@@ -54,6 +56,7 @@ final class APODsCollectionViewManager: NSObject {
 
     func makeDataSource() -> UICollectionViewDiffableDataSource<APODsSection, APODsCellItem>.CellProvider {
         { (collectionView: UICollectionView, indexPath: IndexPath, identifier: APODsCellItem) -> UICollectionViewCell? in
+
             switch identifier.type {
             case .dataSelectItemType(let type):
                 if type.type == .custom {
@@ -64,6 +67,13 @@ final class APODsCollectionViewManager: NSObject {
                 }
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: APODsSelectDateCell.identifier, for: indexPath) as? APODsSelectDateCell
                 cell?.setup(title: type.type.description)
+                return cell
+            case .imageItemType(type: let type):
+                let cell = collectionView.dequeueReusableCell(
+                    withReuseIdentifier: MainImageCell.identifier,
+                    for: indexPath) as? MainImageCell
+                cell?.set(title: type.title)
+                cell?.setImage(with: type.imageUrl)
                 return cell
             }
         }
@@ -86,6 +96,10 @@ extension APODsCollectionViewManager: APODsCollectionViewManagerInput {
             forCellWithReuseIdentifier: APODCustomDateCell.identifier
         )
         self.collectionView.register(
+            MainImageCell.self.self,
+            forCellWithReuseIdentifier: MainImageCell.identifier
+        )
+        self.collectionView.register(
             APODsCollectionHeaderView.self,
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: APODsCollectionHeaderView.identifier
@@ -99,9 +113,21 @@ extension APODsCollectionViewManager: APODsCollectionViewManagerInput {
         dataSource.apply(snapshot)
     }
 
+    func appendPicturesSection(_ section: APODsSection) {
+        var snapshot = dataSource.snapshot()
+        snapshot.appendSections([section])
+        snapshot.appendItems(section.items, toSection: section)
+        dataSource.apply(snapshot)
+    }
+
     func customDateCellPicked(from: String, to: String, selected: Bool) {
         guard let cell = collectionView.visibleCells.first(where: { $0 is APODCustomDateCell }) as? APODCustomDateCell else { return }
         (selected ? cell.selectDates(from: from, until: to) : cell.unselectDates())
+    }
+
+    func dateCellPicked(with indexPath: IndexPath, selected: Bool) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? APODsSelectDateCell else { return }
+        (selected ? cell.selectCell() : cell.unselectCell())
     }
 }
 
@@ -109,7 +135,7 @@ extension APODsCollectionViewManager: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let section = section(by: indexPath.section) else { return }
         let item = section.items[indexPath.row]
-        delegate?.cellTapped(section: section, item: item)
+        delegate?.cellTapped(item: item, indexPath: indexPath)
     }
 }
 
@@ -129,6 +155,8 @@ private extension APODsCollectionViewManager {
         switch type {
         case .dataSelectType:
             return makeDataSelectSection()
+        case .pictures:
+            return makePicturesSection()
         }
     }
 
@@ -168,6 +196,25 @@ private extension APODsCollectionViewManager {
         let containerGroup = NSCollectionLayoutGroup.horizontal(layoutSize: containerGroupSize, subitems: [ladingGroup1, ladingGroup1, trailingGroup])
         let section = NSCollectionLayoutSection(group: containerGroup)
         section.interGroupSpacing = 4
+//        section.boundarySupplementaryItems = [makeHeader()]
+        section.contentInsets = .init(top: 8, leading: 16, bottom: 0, trailing: 16)
+        return section
+    }
+
+    func makePicturesSection() -> NSCollectionLayoutSection {
+        let width = collectionView.frame.width - 16
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .absolute(width),
+            heightDimension: .absolute(200))
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.48),
+            heightDimension: .absolute(200))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 4
+//        section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
 //        section.boundarySupplementaryItems = [makeHeader()]
         section.contentInsets = .init(top: 8, leading: 16, bottom: 0, trailing: 16)
         return section
