@@ -2,7 +2,7 @@ import UIKit
 
 class APODsAssembly {
 
-    static func assemble() -> (view: UIViewController, output: APODsModuleOutput) {
+    static func assemble() -> (view: UIViewController, module: APODsModuleOutput & APODsModuleInput) {
         let view = APODsViewController()
         let presenter = APODsPresenter()
         let interactor = APODsInteractor()

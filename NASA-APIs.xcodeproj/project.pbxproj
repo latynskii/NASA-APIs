@@ -10,6 +10,7 @@
 		018BF0DAA77D07A0CBAD8B9C /* APIListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58894CAAD0DFD274B5A14A1 /* APIListInteractorOutput.swift */; };
 		0AD2DA0806923800476DF3F2 /* APODsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62B611A603FFA4E2B3EF527 /* APODsAssembly.swift */; };
 		1699631156A8CCB1C882D6C9 /* APIListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052696C85BDF3840C2C7BB2F /* APIListViewInput.swift */; };
+		1E83448978ABA91F46A04AF0 /* APODsDatePickerViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A895C9C3DE83511293D9D /* APODsDatePickerViewOutput.swift */; };
 		232753752BC6AAB70036A15E /* APODsCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232753742BC6AAB70036A15E /* APODsCollectionViewManager.swift */; };
 		232753922BC6C4770036A15E /* APODsSelectDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232753912BC6C4770036A15E /* APODsSelectDateCell.swift */; };
 		232753942BC6DF960036A15E /* APODsCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232753932BC6DF960036A15E /* APODsCollectionHeaderView.swift */; };
@@ -31,16 +32,24 @@
 		23A75C312BBADBB700DA276D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75C302BBADBB700DA276D /* BaseViewController.swift */; };
 		23A75C332BBAE0C300DA276D /* APODsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75C322BBAE0C300DA276D /* APODsCoordinator.swift */; };
 		3B5B096A6BF78401C833E273 /* APIListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */; };
+		3D79B20CFDDAA3FD03727957 /* APODsDatePickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B4DE6CCB8E87A0EA24B09 /* APODsDatePickerInteractor.swift */; };
 		41B272E6471878F3D7FE49B7 /* APODsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7ACE40A2AFCD11C23C207 /* APODsPresenter.swift */; };
+		455048DDCA4F55FE42D2CA50 /* APODsDatePickerModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2074CF1C6CCD9B527A9F02FC /* APODsDatePickerModuleOutput.swift */; };
 		466C1CE6F2D170AA4CC8F31F /* APIListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C83A6E37181A58ED4223291 /* APIListPresenter.swift */; };
+		47FCA46B3E0DEF1D07A64370 /* APODsDatePickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D57A168DB2C239D3EC2B57 /* APODsDatePickerPresenter.swift */; };
+		547B95E57AEDCD8F1CD1D16D /* APODsDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F32AE7EB9C13AD3D4D1C4EA /* APODsDatePickerViewController.swift */; };
 		5695CD205D03263BEFABE6D1 /* APIListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E64887677CBC0D2751958 /* APIListViewController.swift */; };
+		5C52F1AB415B899332E369D6 /* APODsDatePickerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401F6258642A4818584D65F6 /* APODsDatePickerAssembly.swift */; };
 		5F235E029FB909BA5455FCA5 /* APODsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D845D687C6C97F38FA378CF /* APODsInteractor.swift */; };
 		7418CDCB40B41F917809AF77 /* APIListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2105377EBFDF45461C881B3 /* APIListAssembly.swift */; };
 		8AA9ABF266A247A5CA6AA830 /* APIListModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0152B8E504B4FBC2C21781 /* APIListModuleOutput.swift */; };
 		8B90AE306C5C14C845E5DFCB /* APODsModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F747E3ECF90E41498B5973 /* APODsModuleOutput.swift */; };
 		917B9A7A86A485B15BEAF1BB /* APIListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C989DF38802ECF09794E21D /* APIListInteractor.swift */; };
+		B06B4C4C5A6A8CDB41776696 /* APODsDatePickerInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C862090D17CC0F20B5BF79F /* APODsDatePickerInteractorInput.swift */; };
 		B767420D20D21B46363E3970 /* APODsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C61D782A63D181CF493D64 /* APODsInteractorInput.swift */; };
+		C2443F08AB16E1B6B95B9D35 /* APODsDatePickerInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484C8DD82D38E2EF9A99A6C /* APODsDatePickerInteractorOutput.swift */; };
 		C5217B7D546EFE406C6879B3 /* APODsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0618CD7C89E6A89FA2576E9 /* APODsViewController.swift */; };
+		C57B539BF88CB328F0AFF0D2 /* APODsDatePickerViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D65B33BAFDB0133E543E0 /* APODsDatePickerViewInput.swift */; };
 		D308F3490B91FF108B1048A8 /* APODsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE26B841BA100C21076B4B7 /* APODsInteractorOutput.swift */; };
 		D698DD4ED67FE023B6F72201 /* APODsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F183C1653D1A16B9ECD8878F /* APODsViewInput.swift */; };
 		E3BE5580C90FCCA05442D98F /* APIListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCA99D0DA2E0826F052FCF /* APIListInteractorInput.swift */; };
@@ -48,8 +57,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0484C8DD82D38E2EF9A99A6C /* APODsDatePickerInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerInteractorOutput.swift; sourceTree = "<group>"; };
 		052696C85BDF3840C2C7BB2F /* APIListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewInput.swift; sourceTree = "<group>"; };
 		068A5E937C54A1353E64E480 /* APODsViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsViewOutput.swift; sourceTree = "<group>"; };
+		2074CF1C6CCD9B527A9F02FC /* APODsDatePickerModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerModuleOutput.swift; sourceTree = "<group>"; };
 		232753742BC6AAB70036A15E /* APODsCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsCollectionViewManager.swift; sourceTree = "<group>"; };
 		232753912BC6C4770036A15E /* APODsSelectDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsSelectDateCell.swift; sourceTree = "<group>"; };
 		232753932BC6DF960036A15E /* APODsCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsCollectionHeaderView.swift; sourceTree = "<group>"; };
@@ -71,14 +82,21 @@
 		23A75C302BBADBB700DA276D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		23A75C322BBAE0C300DA276D /* APODsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsCoordinator.swift; sourceTree = "<group>"; };
 		2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewOutput.swift; sourceTree = "<group>"; };
+		3F32AE7EB9C13AD3D4D1C4EA /* APODsDatePickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerViewController.swift; sourceTree = "<group>"; };
+		401F6258642A4818584D65F6 /* APODsDatePickerAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerAssembly.swift; sourceTree = "<group>"; };
+		4C862090D17CC0F20B5BF79F /* APODsDatePickerInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerInteractorInput.swift; sourceTree = "<group>"; };
 		4EE7ACE40A2AFCD11C23C207 /* APODsPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsPresenter.swift; sourceTree = "<group>"; };
 		76C61D782A63D181CF493D64 /* APODsInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsInteractorInput.swift; sourceTree = "<group>"; };
 		7A3E64887677CBC0D2751958 /* APIListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewController.swift; sourceTree = "<group>"; };
+		867D65B33BAFDB0133E543E0 /* APODsDatePickerViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerViewInput.swift; sourceTree = "<group>"; };
 		8C83A6E37181A58ED4223291 /* APIListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListPresenter.swift; sourceTree = "<group>"; };
 		8D845D687C6C97F38FA378CF /* APODsInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsInteractor.swift; sourceTree = "<group>"; };
+		98D57A168DB2C239D3EC2B57 /* APODsDatePickerPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerPresenter.swift; sourceTree = "<group>"; };
 		9C989DF38802ECF09794E21D /* APIListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListInteractor.swift; sourceTree = "<group>"; };
 		9D0152B8E504B4FBC2C21781 /* APIListModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListModuleOutput.swift; sourceTree = "<group>"; };
 		A0618CD7C89E6A89FA2576E9 /* APODsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsViewController.swift; sourceTree = "<group>"; };
+		A17A895C9C3DE83511293D9D /* APODsDatePickerViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerViewOutput.swift; sourceTree = "<group>"; };
+		DE2B4DE6CCB8E87A0EA24B09 /* APODsDatePickerInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerInteractor.swift; sourceTree = "<group>"; };
 		E1FCA99D0DA2E0826F052FCF /* APIListInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListInteractorInput.swift; sourceTree = "<group>"; };
 		E8F747E3ECF90E41498B5973 /* APODsModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsModuleOutput.swift; sourceTree = "<group>"; };
 		F183C1653D1A16B9ECD8878F /* APODsViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsViewInput.swift; sourceTree = "<group>"; };
@@ -101,6 +119,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0331EEA85C4CC521E6AB64A6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				98D57A168DB2C239D3EC2B57 /* APODsDatePickerPresenter.swift */,
+				0484C8DD82D38E2EF9A99A6C /* APODsDatePickerInteractorOutput.swift */,
+				A17A895C9C3DE83511293D9D /* APODsDatePickerViewOutput.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		1629D8E04B358DD509C22302 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +245,7 @@
 			children = (
 				2F09D86F58A3031B65A8EBD3 /* APIList */,
 				83EEB33B3271BDAB5572ABF6 /* APODs */,
+				336C6FD4F905D65ED3469FD6 /* APODsDatePicker */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -267,6 +297,18 @@
 			path = APIList;
 			sourceTree = "<group>";
 		};
+		336C6FD4F905D65ED3469FD6 /* APODsDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E049EFA16C1133A0CBB24004 /* View */,
+				0331EEA85C4CC521E6AB64A6 /* Presenter */,
+				D2AC82976F276B7171825961 /* Interactor */,
+				8D15A364D05C4D016DCFB980 /* Assembly */,
+			);
+			name = APODsDatePicker;
+			path = APODsDatePicker;
+			sourceTree = "<group>";
+		};
 		83EEB33B3271BDAB5572ABF6 /* APODs */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +320,16 @@
 				23A75C392BBAF51600DA276D /* Coordinator */,
 			);
 			path = APODs;
+			sourceTree = "<group>";
+		};
+		8D15A364D05C4D016DCFB980 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				401F6258642A4818584D65F6 /* APODsDatePickerAssembly.swift */,
+				2074CF1C6CCD9B527A9F02FC /* APODsDatePickerModuleOutput.swift */,
+			);
+			name = Assembly;
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		998CE14DD2954B9569A578D2 /* Presenter */ = {
@@ -315,6 +367,26 @@
 				A0618CD7C89E6A89FA2576E9 /* APODsViewController.swift */,
 				236803E32BD79ECA005312C2 /* BottomBarView.swift */,
 			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D2AC82976F276B7171825961 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4C862090D17CC0F20B5BF79F /* APODsDatePickerInteractorInput.swift */,
+				DE2B4DE6CCB8E87A0EA24B09 /* APODsDatePickerInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E049EFA16C1133A0CBB24004 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				867D65B33BAFDB0133E543E0 /* APODsDatePickerViewInput.swift */,
+				3F32AE7EB9C13AD3D4D1C4EA /* APODsDatePickerViewController.swift */,
+			);
+			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -449,6 +521,15 @@
 				5F235E029FB909BA5455FCA5 /* APODsInteractor.swift in Sources */,
 				0AD2DA0806923800476DF3F2 /* APODsAssembly.swift in Sources */,
 				8B90AE306C5C14C845E5DFCB /* APODsModuleOutput.swift in Sources */,
+				C57B539BF88CB328F0AFF0D2 /* APODsDatePickerViewInput.swift in Sources */,
+				547B95E57AEDCD8F1CD1D16D /* APODsDatePickerViewController.swift in Sources */,
+				47FCA46B3E0DEF1D07A64370 /* APODsDatePickerPresenter.swift in Sources */,
+				C2443F08AB16E1B6B95B9D35 /* APODsDatePickerInteractorOutput.swift in Sources */,
+				1E83448978ABA91F46A04AF0 /* APODsDatePickerViewOutput.swift in Sources */,
+				B06B4C4C5A6A8CDB41776696 /* APODsDatePickerInteractorInput.swift in Sources */,
+				3D79B20CFDDAA3FD03727957 /* APODsDatePickerInteractor.swift in Sources */,
+				5C52F1AB415B899332E369D6 /* APODsDatePickerAssembly.swift in Sources */,
+				455048DDCA4F55FE42D2CA50 /* APODsDatePickerModuleOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
