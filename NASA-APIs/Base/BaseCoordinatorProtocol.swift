@@ -3,7 +3,6 @@ import UIKit
 
 protocol BaseCoordinatorProtocol: AnyObject {
     var moduleClosed: (() -> Void)? { get set }
-
     func start()
 }
 
@@ -19,7 +18,6 @@ extension BaseCoordinatorProtocol {
         guard let presentedView = presentedView else { return }
         presentingView.modalPresentationStyle = .fullScreen
         presentingView.modalTransitionStyle = .crossDissolve
-
         presentedView.present(presentingView, animated: true)
     }
 }

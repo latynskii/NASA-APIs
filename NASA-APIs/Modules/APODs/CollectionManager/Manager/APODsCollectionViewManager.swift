@@ -205,10 +205,10 @@ private extension APODsCollectionViewManager {
         let width = collectionView.frame.width - 16
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .absolute(width),
-            heightDimension: .absolute(200))
+            heightDimension: .absolute(240))
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.48),
-            heightDimension: .absolute(200))
+            heightDimension: .absolute(240))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])

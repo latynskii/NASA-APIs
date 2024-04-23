@@ -12,6 +12,8 @@ class BaseViewController: UIViewController {
 
     private var configuredWithLargeTitle: Bool = false
 
+    private var loadingViews = [UIView]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -43,5 +45,31 @@ private extension BaseViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.scrollEdgeAppearance = bigTitleAppearance // big navigation bar appearance
         navigationController?.navigationBar.standardAppearance = compactAppearance // standard navigation bar appearance
+    }
+}
+
+extension BaseViewController {
+    func showLoader() {
+        let blurEffect = UIBlurEffect(style: .systemThinMaterialDark)
+        let blurredEffectView = UIVisualEffectView(effect: blurEffect)
+        blurredEffectView.alpha = 0.8
+        blurredEffectView.frame = view.bounds
+        view.addSubview(blurredEffectView)
+
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        view.addSubview(activityIndicator)
+        activityIndicator.color = .black
+        activityIndicator.snp.makeConstraints {
+            $0.centerX.centerY.equalToSuperview()
+            $0.size.equalTo(44)
+        }
+        activityIndicator.startAnimating()
+        [activityIndicator, blurredEffectView].forEach { loadingViews.append($0) }
+    }
+
+    func hideLoader() {
+        loadingViews.forEach {
+            $0.removeFromSuperview()
+        }
     }
 }

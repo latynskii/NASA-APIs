@@ -22,9 +22,6 @@ final class APODsPresenter: APODsModuleOutput {
 extension APODsPresenter: APODsViewOutput {
     func viewDidLoad() {
         view.setDateSelect(section: dataProvider.dateSelectSection)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.view.setPictures(section: self.dataProvider.picturesSection)
-        }
     }
 
     func viewDidDeInited() {
@@ -49,25 +46,21 @@ extension APODsPresenter: APODsCollectionViewManagerDelegate {
 
 private extension APODsPresenter {
     func selectCustomDateTapped() {
-        if let previousIndex = previousSelectedCell {
-            view.dateCellTapped(indexPath: previousIndex, selected: false) // unselect another dates cells
-        }
         onDatePicker?()
-
     }
+    
     func selectDateTapped(with model: APODsDateSelectItemModel, and indexPath: IndexPath) {
         defer {
             self.selectedDateType = model.type
         }
         if model.type == .custom {
-//            guard self.selectedDateType != .custom else { return }
-//            // TODO: get real dates
-//            view.customDatesCellTapped(fromValue: "01.01.01", // select custom date cell
-//                                       toValue: "01.01.03",
-//                                       selected: true
-//            )
             selectCustomDateTapped()
         } else {
+            view.setLoader(state: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.view.setLoader(state: false)
+                self.view.setPictures(section: self.dataProvider.picturesSection)
+            }
             if selectedDateType == .custom {
                 view.customDatesCellTapped(fromValue: "", // unselect custom date cell
                                            toValue: "",

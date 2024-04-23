@@ -5,4 +5,6 @@ protocol APODsViewInput: AnyObject {
     func customDatesCellTapped(fromValue: String, toValue: String, selected: Bool)
     func dateCellTapped(indexPath: IndexPath, selected: Bool)
     func setPictures(section: APODsSection)
+
+    func setLoader(state: Bool)
 }

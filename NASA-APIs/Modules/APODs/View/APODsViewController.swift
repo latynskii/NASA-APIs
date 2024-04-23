@@ -4,7 +4,7 @@ private struct Appearance {
     static let backgroundColor: UIColor = .grayBackground
 }
 
-final class APODsViewController: UIViewController {
+final class APODsViewController: BaseViewController {
 
     var presenter: APODsViewOutput!
     var collectionManagerInput: APODsCollectionViewManagerInput!
@@ -15,6 +15,7 @@ final class APODsViewController: UIViewController {
             collectionViewLayout: UICollectionViewLayout()
         )
         collection.backgroundColor = Appearance.backgroundColor
+        collection.contentInset.bottom = 40
         return collection
     }()
 
@@ -72,5 +73,9 @@ extension APODsViewController: APODsViewInput {
 
     func dateCellTapped(indexPath: IndexPath, selected: Bool) {
         collectionManagerInput.dateCellPicked(with: indexPath, selected: selected)
+    }
+
+    func setLoader(state: Bool) {
+        ( state ? self.showLoader() : hideLoader() )
     }
 }

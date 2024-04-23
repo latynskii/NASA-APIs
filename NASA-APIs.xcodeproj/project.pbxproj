@@ -126,7 +126,6 @@
 				0484C8DD82D38E2EF9A99A6C /* APODsDatePickerInteractorOutput.swift */,
 				A17A895C9C3DE83511293D9D /* APODsDatePickerViewOutput.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -305,7 +304,6 @@
 				D2AC82976F276B7171825961 /* Interactor */,
 				8D15A364D05C4D016DCFB980 /* Assembly */,
 			);
-			name = APODsDatePicker;
 			path = APODsDatePicker;
 			sourceTree = "<group>";
 		};
@@ -328,7 +326,6 @@
 				401F6258642A4818584D65F6 /* APODsDatePickerAssembly.swift */,
 				2074CF1C6CCD9B527A9F02FC /* APODsDatePickerModuleOutput.swift */,
 			);
-			name = Assembly;
 			path = Assembly;
 			sourceTree = "<group>";
 		};
@@ -376,7 +373,6 @@
 				4C862090D17CC0F20B5BF79F /* APODsDatePickerInteractorInput.swift */,
 				DE2B4DE6CCB8E87A0EA24B09 /* APODsDatePickerInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -386,7 +382,6 @@
 				867D65B33BAFDB0133E543E0 /* APODsDatePickerViewInput.swift */,
 				3F32AE7EB9C13AD3D4D1C4EA /* APODsDatePickerViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};

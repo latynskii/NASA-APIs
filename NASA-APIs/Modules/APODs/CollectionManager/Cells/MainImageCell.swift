@@ -14,6 +14,7 @@ final class MainImageCell: UICollectionViewCell {
         $0.layer.cornerRadius = 10
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFill
+        $0.backgroundColor = .darkGray
         return $0
     }(UIImageView(frame: .zero))
 
@@ -53,7 +54,6 @@ final class MainImageCell: UICollectionViewCell {
 
     func setImage(with url: URL?) {
         image.kf.setImage(with: url)
-        // TODO: set with cd image
     }
 
     func set(title: String) {
