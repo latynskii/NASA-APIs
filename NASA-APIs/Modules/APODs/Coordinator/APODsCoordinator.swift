@@ -1,4 +1,3 @@
-
 import UIKit
 
 final class APODsCoordinator: BaseCoordinatorProtocol {
@@ -13,17 +12,10 @@ final class APODsCoordinator: BaseCoordinatorProtocol {
     func start() {
         var module = APODsAssembly.assemble()
         module.output.onFinished = { [weak self] in
+            module.view.dismiss(animated: true)
             self?.moduleClosed?()
         }
-        push(view: module.view)
-    }
-}
-
-private extension APODsCoordinator {
-    func push(view: UIViewController) {
-        guard let navigationVC = presentedView?.navigationController else { return }
-        view.navigationItem.largeTitleDisplayMode = .never
-        navigationVC.pushViewController(view, animated: true)
+        present(presentedView: presentedView, presentingView: module.view)
     }
 }
 

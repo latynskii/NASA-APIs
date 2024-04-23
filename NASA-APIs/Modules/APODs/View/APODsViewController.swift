@@ -1,7 +1,7 @@
 import UIKit
 
 private struct Appearance {
-    static let backgroundColor: UIColor = .lightGray
+    static let backgroundColor: UIColor = .grayBackground
 }
 
 final class APODsViewController: UIViewController {
@@ -18,6 +18,12 @@ final class APODsViewController: UIViewController {
         return collection
     }()
 
+    private lazy var bottomBar: BottomBarView = {
+        let view = BottomBarView(title: "NASA API", onLeftTapped: {}, onRightTapped: {})
+        view.delegate = presenter
+        return view
+    }()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +38,17 @@ final class APODsViewController: UIViewController {
 
     private func addSubviews() {
         view.addSubview(collectionView)
+        view.addSubview(bottomBar)
     }
 
     private func makeConstraints() {
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+
+        bottomBar.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(20)
+            $0.leading.trailing.equalToSuperview().inset(16)
         }
     }
 

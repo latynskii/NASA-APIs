@@ -75,3 +75,14 @@ private extension APODsPresenter {
         }
     }
 }
+
+    // MARK: - BottomBarViewDelegate
+extension APODsPresenter {
+    func didLeftButtonTapped() {
+        onFinished?()
+    }
+    
+    func didRightButtonTapped() {
+        // TODO: 
+    }
+}
