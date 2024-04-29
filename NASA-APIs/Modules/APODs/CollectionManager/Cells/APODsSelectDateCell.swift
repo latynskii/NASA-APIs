@@ -26,7 +26,12 @@ final class APODsSelectDateCell: UICollectionViewCell {
         addSubviews()
         setupConstrains()
     }
-    
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        unselectCell()
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -50,14 +55,15 @@ final class APODsSelectDateCell: UICollectionViewCell {
 
     func setup(title: String, isSelected: Bool = false) {
         titleLabel.text = title
+        ( isSelected ? selectCell() : unselectCell() )
     }
 
-    func selectCell() {
+    private func selectCell() {
         self.contentView.backgroundColor = .black
         self.titleLabel.textColor = Appearance.selectedTitleColor
     }
 
-    func unselectCell() {
+    private func unselectCell() {
         self.contentView.backgroundColor = .white
         self.titleLabel.textColor = Appearance.titleColor
     }

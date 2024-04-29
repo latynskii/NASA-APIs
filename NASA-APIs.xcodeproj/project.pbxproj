@@ -21,6 +21,10 @@
 		236803C02BD59CD6005312C2 /* MainImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236803BF2BD59CD6005312C2 /* MainImageCell.swift */; };
 		236803C32BD5A0E8005312C2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 236803C22BD5A0E8005312C2 /* Kingfisher */; };
 		236803E42BD79ECA005312C2 /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236803E32BD79ECA005312C2 /* BottomBarView.swift */; };
+		2372548B2BD81022008D1E82 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2372548A2BD81022008D1E82 /* NetworkManager.swift */; };
+		2372548F2BD81537008D1E82 /* PODsNetwrokService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2372548E2BD81537008D1E82 /* PODsNetwrokService.swift */; };
+		237254932BD815B3008D1E82 /* PODsServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237254922BD815B3008D1E82 /* PODsServiceResponse.swift */; };
+		237254952BD81738008D1E82 /* PODsServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237254942BD81738008D1E82 /* PODsServiceRequest.swift */; };
 		23A75BBD2BB9756800DA276D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BBC2BB9756800DA276D /* AppDelegate.swift */; };
 		23A75BBF2BB9756800DA276D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75BBE2BB9756800DA276D /* SceneDelegate.swift */; };
 		23A75BC62BB9756900DA276D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A75BC52BB9756900DA276D /* Assets.xcassets */; };
@@ -31,6 +35,7 @@
 		23A75C152BBAD20800DA276D /* APIListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75C142BBAD20800DA276D /* APIListCellModel.swift */; };
 		23A75C312BBADBB700DA276D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75C302BBADBB700DA276D /* BaseViewController.swift */; };
 		23A75C332BBAE0C300DA276D /* APODsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A75C322BBAE0C300DA276D /* APODsCoordinator.swift */; };
+		23BFB6FC2BD8FBF500BBAF6F /* APODsDateRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB6FB2BD8FBF500BBAF6F /* APODsDateRequestMaker.swift */; };
 		3B5B096A6BF78401C833E273 /* APIListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */; };
 		3D79B20CFDDAA3FD03727957 /* APODsDatePickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B4DE6CCB8E87A0EA24B09 /* APODsDatePickerInteractor.swift */; };
 		41B272E6471878F3D7FE49B7 /* APODsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7ACE40A2AFCD11C23C207 /* APODsPresenter.swift */; };
@@ -70,6 +75,10 @@
 		236803BA2BD2B917005312C2 /* APODCustomDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODCustomDateCell.swift; sourceTree = "<group>"; };
 		236803BF2BD59CD6005312C2 /* MainImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainImageCell.swift; sourceTree = "<group>"; };
 		236803E32BD79ECA005312C2 /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
+		2372548A2BD81022008D1E82 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2372548E2BD81537008D1E82 /* PODsNetwrokService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODsNetwrokService.swift; sourceTree = "<group>"; };
+		237254922BD815B3008D1E82 /* PODsServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODsServiceResponse.swift; sourceTree = "<group>"; };
+		237254942BD81738008D1E82 /* PODsServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODsServiceRequest.swift; sourceTree = "<group>"; };
 		23A75BB92BB9756800DA276D /* NASA-APIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA-APIs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A75BBC2BB9756800DA276D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A75BBE2BB9756800DA276D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +90,7 @@
 		23A75C142BBAD20800DA276D /* APIListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIListCellModel.swift; sourceTree = "<group>"; };
 		23A75C302BBADBB700DA276D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		23A75C322BBAE0C300DA276D /* APODsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsCoordinator.swift; sourceTree = "<group>"; };
+		23BFB6FB2BD8FBF500BBAF6F /* APODsDateRequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsDateRequestMaker.swift; sourceTree = "<group>"; };
 		2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewOutput.swift; sourceTree = "<group>"; };
 		3F32AE7EB9C13AD3D4D1C4EA /* APODsDatePickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerViewController.swift; sourceTree = "<group>"; };
 		401F6258642A4818584D65F6 /* APODsDatePickerAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerAssembly.swift; sourceTree = "<group>"; };
@@ -185,6 +195,41 @@
 			path = DataProvider;
 			sourceTree = "<group>";
 		};
+		2372548C2BD8102B008D1E82 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2372548D2BD81525008D1E82 /* Base */,
+				237254902BD81556008D1E82 /* Services */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		2372548D2BD81525008D1E82 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2372548A2BD81022008D1E82 /* NetworkManager.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		237254902BD81556008D1E82 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				237254912BD8155F008D1E82 /* PODsService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		237254912BD8155F008D1E82 /* PODsService */ = {
+			isa = PBXGroup;
+			children = (
+				2372548E2BD81537008D1E82 /* PODsNetwrokService.swift */,
+				237254922BD815B3008D1E82 /* PODsServiceResponse.swift */,
+				237254942BD81738008D1E82 /* PODsServiceRequest.swift */,
+			);
+			path = PODsService;
+			sourceTree = "<group>";
+		};
 		23A75BB02BB9756800DA276D = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +254,7 @@
 				23A75BD42BB97B1500DA276D /* Sources */,
 				23A75BD32BB97B0300DA276D /* Storyboards */,
 				23A75BD82BB9935100DA276D /* Base */,
+				2372548C2BD8102B008D1E82 /* NetworkLayer */,
 			);
 			path = "NASA-APIs";
 			sourceTree = "<group>";
@@ -275,6 +321,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		23BFB6FD2BD8FBFF00BBAF6F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				23BFB6FB2BD8FBF500BBAF6F /* APODsDateRequestMaker.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		2E5A871FD9B730582ED8C9C2 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +370,7 @@
 				2E5A871FD9B730582ED8C9C2 /* Interactor */,
 				1629D8E04B358DD509C22302 /* Assembly */,
 				23A75C392BBAF51600DA276D /* Coordinator */,
+				23BFB6FD2BD8FBFF00BBAF6F /* Utils */,
 			);
 			path = APODs;
 			sourceTree = "<group>";
@@ -486,6 +541,8 @@
 				236803E42BD79ECA005312C2 /* BottomBarView.swift in Sources */,
 				232753982BC7C2320036A15E /* APODsSection.swift in Sources */,
 				23A75C152BBAD20800DA276D /* APIListCellModel.swift in Sources */,
+				23BFB6FC2BD8FBF500BBAF6F /* APODsDateRequestMaker.swift in Sources */,
+				2372548B2BD81022008D1E82 /* NetworkManager.swift in Sources */,
 				23A75BDA2BB993A200DA276D /* MainCoordinator.swift in Sources */,
 				23A75BD72BB9934C00DA276D /* BaseCoordinatorProtocol.swift in Sources */,
 				2327539C2BC7C2C00036A15E /* APODsCellItem.swift in Sources */,
@@ -505,6 +562,8 @@
 				917B9A7A86A485B15BEAF1BB /* APIListInteractor.swift in Sources */,
 				7418CDCB40B41F917809AF77 /* APIListAssembly.swift in Sources */,
 				8AA9ABF266A247A5CA6AA830 /* APIListModuleOutput.swift in Sources */,
+				237254952BD81738008D1E82 /* PODsServiceRequest.swift in Sources */,
+				237254932BD815B3008D1E82 /* PODsServiceResponse.swift in Sources */,
 				D698DD4ED67FE023B6F72201 /* APODsViewInput.swift in Sources */,
 				C5217B7D546EFE406C6879B3 /* APODsViewController.swift in Sources */,
 				41B272E6471878F3D7FE49B7 /* APODsPresenter.swift in Sources */,
@@ -519,6 +578,7 @@
 				C57B539BF88CB328F0AFF0D2 /* APODsDatePickerViewInput.swift in Sources */,
 				547B95E57AEDCD8F1CD1D16D /* APODsDatePickerViewController.swift in Sources */,
 				47FCA46B3E0DEF1D07A64370 /* APODsDatePickerPresenter.swift in Sources */,
+				2372548F2BD81537008D1E82 /* PODsNetwrokService.swift in Sources */,
 				C2443F08AB16E1B6B95B9D35 /* APODsDatePickerInteractorOutput.swift in Sources */,
 				1E83448978ABA91F46A04AF0 /* APODsDatePickerViewOutput.swift in Sources */,
 				B06B4C4C5A6A8CDB41776696 /* APODsDatePickerInteractorInput.swift in Sources */,

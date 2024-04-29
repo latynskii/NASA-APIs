@@ -13,8 +13,8 @@ extension APODsDatePickerPresenter: APODsDatePickerViewOutput {
     }
 
     func viewDidDisappear() {
-        let fromDate: Date = .now
-        let untilDate: Date = Calendar.current.date(byAdding: .day, value: 1, to: fromDate) ?? Date()
+        let untilDate: Date = .now
+        let fromDate: Date = Calendar.current.date(byAdding: .weekOfMonth, value: -2, to: untilDate) ?? Date()
         let mockResult = APODsDatePickerModuleOutputResult(
             fromDate: fromDate,
             toDate: untilDate)

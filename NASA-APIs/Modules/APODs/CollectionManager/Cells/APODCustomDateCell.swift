@@ -70,7 +70,7 @@ final class APODCustomDateCell: UICollectionViewCell {
         }
     }
 
-    func selectDates(from: String, until: String) {
+    func selectDates(from: String?, until: String?) {
         contentView.addSubview(mainStackView)
         [
             image,

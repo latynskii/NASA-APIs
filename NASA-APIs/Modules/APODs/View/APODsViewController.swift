@@ -59,23 +59,24 @@ final class APODsViewController: BaseViewController {
 }
 
 extension APODsViewController: APODsViewInput {
-    func customDatesCellTapped(fromValue: String, toValue: String, selected: Bool) {
-        collectionManagerInput.customDateCellPicked(from: fromValue, to: toValue, selected: selected)
-    }
-    
-    func setDateSelect(section: APODsSection) {
-        collectionManagerInput.appendDateSelection(section)
+    func setDateSelect() {
+        collectionManagerInput.createDateSelectionSection()
     }
 
     func setPictures(section: APODsSection) {
         collectionManagerInput.appendPicturesSection(section)
     }
 
-    func dateCellTapped(indexPath: IndexPath, selected: Bool) {
-        collectionManagerInput.dateCellPicked(with: indexPath, selected: selected)
-    }
 
     func setLoader(state: Bool) {
         ( state ? self.showLoader() : hideLoader() )
+    }
+
+    func selectDate(type: APODsDateSelectItemModelType) {
+        collectionManagerInput.updateDateSelectionSection(with: type, fromDate: nil, untilDate: nil)
+    }
+
+    func selectCustomDate(fromDate: String, lastDate: String) {
+        collectionManagerInput.updateDateSelectionSection(with: .custom, fromDate: fromDate, untilDate: lastDate)
     }
 }

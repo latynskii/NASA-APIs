@@ -1,10 +1,14 @@
 import Foundation
 
 struct APODsCellItem: Hashable {
-    let id = UUID()
+    let id: UUID
     let type: APODsItemType
-}
 
+    init(id: UUID = UUID(), type: APODsItemType) {
+        self.type = type
+        self.id = id
+    }
+}
 
 enum APODsItemType: Hashable {
     case dataSelectItemType(type: APODsDateSelectItemModel)
@@ -17,9 +21,18 @@ struct APODsDateSelectItemModel: Hashable {
     
     var selected: Bool = false
 
-    init(type: APODsDateSelectItemModelType, selected: Bool = false) {
+    var fromDate: String?
+    var untilDate: String?
+
+    init(type: APODsDateSelectItemModelType, 
+         selected: Bool = false,
+         fromDate: String? = nil,
+         untilDate: String? = nil
+    ) {
         self.type = type
         self.selected = selected
+        self.fromDate = fromDate
+        self.untilDate = untilDate
     }
 }
 

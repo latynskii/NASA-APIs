@@ -3,10 +3,9 @@ import UIKit
 
 protocol APODsCollectionViewManagerInput: AnyObject {
     func connect(with collectionView: UICollectionView)
-    func appendDateSelection(_ section: APODsSection)
-    func customDateCellPicked(from: String, to: String, selected: Bool)
     func appendPicturesSection(_ section: APODsSection)
-    func dateCellPicked(with indexPath: IndexPath, selected: Bool)
+    func createDateSelectionSection()
+    func updateDateSelectionSection(with type: APODsDateSelectItemModelType, fromDate: String?, untilDate: String?)
 }
 
 private extension APODsCollectionViewManager {
@@ -63,10 +62,13 @@ final class APODsCollectionViewManager: NSObject {
                     let cell = collectionView.dequeueReusableCell(
                         withReuseIdentifier: APODCustomDateCell.identifier,
                         for: indexPath) as? APODCustomDateCell
+                    ( type.selected ? cell?.selectDates(from: type.fromDate, until: type.untilDate) : cell?.unselectDates() )
                     return cell
                 }
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: APODsSelectDateCell.identifier, for: indexPath) as? APODsSelectDateCell
-                cell?.setup(title: type.type.description)
+                let cell = collectionView.dequeueReusableCell(
+                    withReuseIdentifier: APODsSelectDateCell.identifier,
+                    for: indexPath) as? APODsSelectDateCell
+                cell?.setup(title: type.type.description, isSelected: type.selected)
                 return cell
             case .imageItemType(type: let type):
                 let cell = collectionView.dequeueReusableCell(
@@ -82,6 +84,57 @@ final class APODsCollectionViewManager: NSObject {
 
 // MARK: - APODsCollectionViewManagerInput
 extension APODsCollectionViewManager: APODsCollectionViewManagerInput {
+
+    // Create default start section
+    func createDateSelectionSection() {
+        var snapshot = dataSource.snapshot()
+        let section = APODsSection(
+            title: "",
+            items: [
+                .init(type: .dataSelectItemType(type: .init(type: .today))),
+                .init(type: .dataSelectItemType(type: .init(type: .week))),
+                .init(type: .dataSelectItemType(type: .init(type: .month))),
+                .init(type: .dataSelectItemType(type: .init(type: .year))),
+                .init(type: .dataSelectItemType(type: .init(type: .custom)))
+            ],
+            type: .dataSelectType
+        )
+        snapshot.appendSections([section])
+        snapshot.appendItems(section.items, toSection: section)
+        dataSource.apply(snapshot)
+    }
+
+    func updateDateSelectionSection(with type: APODsDateSelectItemModelType, fromDate: String?, untilDate: String?) {
+        var snapshot = dataSource.snapshot()
+        let selectedType: APODsDateSelectItemModelType = type
+        guard let sectionForRemoving = snapshot.sectionIdentifiers.first(where: { $0.type == .dataSelectType }) else { return }
+        let section = APODsSection(
+            title: "",
+            items: [
+                .init(type: .dataSelectItemType(type: .init(type: .today, selected: getValueFor(wint: .today, newType: selectedType)))),
+                .init(type: .dataSelectItemType(type: .init(type: .week, selected: getValueFor(wint: .week, newType: selectedType)))),
+                .init(type: .dataSelectItemType(type: .init(type: .month, selected: getValueFor(wint: .month, newType: selectedType)))),
+                .init(type: .dataSelectItemType(type: .init(type: .year, selected: getValueFor(wint: .year, newType: selectedType)))),
+                .init(type: .dataSelectItemType(type: .init(
+                    type: .custom, 
+                    selected: getValueFor(wint: .custom, newType: selectedType),
+                    fromDate: fromDate,
+                    untilDate: untilDate
+                )))
+            ],
+            type: .dataSelectType
+        )
+
+        snapshot.deleteSections([sectionForRemoving])
+        snapshot.appendSections([section])
+        snapshot.appendItems(section.items, toSection: section)
+        dataSource.apply(snapshot, animatingDifferences: false)
+        func getValueFor(wint inputType: APODsDateSelectItemModelType,
+                         newType: APODsDateSelectItemModelType
+        ) -> Bool {
+            inputType == newType
+        }
+    }
 
     func connect(with collectionView: UICollectionView) {
         self.collectionView = collectionView
@@ -106,28 +159,14 @@ extension APODsCollectionViewManager: APODsCollectionViewManagerInput {
         )
     }
 
-    func appendDateSelection(_ section: APODsSection) {
-        var snapshot = dataSource.snapshot()
-        snapshot.appendSections([section])
-        snapshot.appendItems(section.items, toSection: section)
-        dataSource.apply(snapshot)
-    }
-
     func appendPicturesSection(_ section: APODsSection) {
         var snapshot = dataSource.snapshot()
+        if let section = snapshot.sectionIdentifiers.first(where: { $0.id == section.id } ) {
+            snapshot.deleteSections([section])
+        }
         snapshot.appendSections([section])
         snapshot.appendItems(section.items, toSection: section)
-        dataSource.apply(snapshot)
-    }
-
-    func customDateCellPicked(from: String, to: String, selected: Bool) {
-        guard let cell = collectionView.visibleCells.first(where: { $0 is APODCustomDateCell }) as? APODCustomDateCell else { return }
-        (selected ? cell.selectDates(from: from, until: to) : cell.unselectDates())
-    }
-
-    func dateCellPicked(with indexPath: IndexPath, selected: Bool) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? APODsSelectDateCell else { return }
-        (selected ? cell.selectCell() : cell.unselectCell())
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
 

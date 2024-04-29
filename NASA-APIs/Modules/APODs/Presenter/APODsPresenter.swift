@@ -8,20 +8,13 @@ final class APODsPresenter: APODsModuleOutput {
     var interactor: APODsInteractorInput!
 
     private var dataProvider = APODsDataProvider()
-
-    private var selectedDateType: APODsDateSelectItemModelType? {
-        didSet {
-            // TODO: 
-        }
-    }
-
-    private var previousSelectedCell: IndexPath?
-
+    private var dateTypeTapped: APODsDateSelectItemModelType?
+    private var outputDatePickerResult: APODsDatePickerModuleOutputResult?
 }
 
 extension APODsPresenter: APODsViewOutput {
     func viewDidLoad() {
-        view.setDateSelect(section: dataProvider.dateSelectSection)
+        view.setDateSelect()
     }
 
     func viewDidDeInited() {
@@ -31,8 +24,34 @@ extension APODsPresenter: APODsViewOutput {
 
 extension APODsPresenter: APODsInteractorOutput {
 
+    func podsReceivedSuccess(result: PODsServiceResponse) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            guard let dateTypeTapped = dateTypeTapped else { return }
+            if dateTypeTapped == .custom {
+                guard let outputDatePickerResult = outputDatePickerResult else { return }
+                view.selectCustomDate(
+                    fromDate: formateDate(date: outputDatePickerResult.fromDate),
+                    lastDate: formateDate(date: outputDatePickerResult.toDate)
+                )
+            } else {
+                view.selectDate(type: dateTypeTapped)
+            }
+            self.view.setLoader(state: false)
+            self.dataProvider.insertPictureSection(with: result.response)
+            self.view.setPictures(section: self.dataProvider.picturesSection)
+        }
+    }
+    
+    func podsReceiveFailure() {
+        // handle error state
+        DispatchQueue.main.async { [weak self] in
+            self?.view.setLoader(state: false)
+        }
+    }
 }
 
+// MARK: - APODsCollectionViewManagerDelegate
 extension APODsPresenter: APODsCollectionViewManagerDelegate {
     func cellTapped(item: APODsCellItem, indexPath: IndexPath) {
         switch item.type {
@@ -45,34 +64,32 @@ extension APODsPresenter: APODsCollectionViewManagerDelegate {
 }
 
 private extension APODsPresenter {
-    func selectCustomDateTapped() {
-        onDatePicker?()
-    }
-    
-    func selectDateTapped(with model: APODsDateSelectItemModel, and indexPath: IndexPath) {
-        defer {
-            self.selectedDateType = model.type
+    func sendRequest(type: APODsDateSelectItemModelType) {
+        switch type {
+        case .today:
+            interactor.getPods(with: APODsDateRequestMaker.day.request)
+        case .week:
+            interactor.getPods(with: APODsDateRequestMaker.week.request)
+        case .month:
+            interactor.getPods(with: APODsDateRequestMaker.month.request)
+        case .year:
+            interactor.getPods(with: APODsDateRequestMaker.year.request)
+        case .custom:
+            guard let outputDatePickerResult = outputDatePickerResult else { return }
+            interactor.getPods(with: APODsDateRequestMaker.custom(outputDatePickerResult).request)
         }
+    }
+
+    func selectDateTapped(with model: APODsDateSelectItemModel, and indexPath: IndexPath) {
+//        defer {
+//            self.tappedCell = (model.type, indexPath)
+//        }
+        self.dateTypeTapped = model.type
         if model.type == .custom {
-            selectCustomDateTapped()
+            onDatePicker?()
         } else {
             view.setLoader(state: true)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                self.view.setLoader(state: false)
-                self.view.setPictures(section: self.dataProvider.picturesSection)
-            }
-            if selectedDateType == .custom {
-                view.customDatesCellTapped(fromValue: "", // unselect custom date cell
-                                           toValue: "",
-                                           selected: false
-                )
-            }
-
-            view.dateCellTapped(indexPath: indexPath, selected: true) // select date cell
-            if let previousIndex = previousSelectedCell, previousIndex != indexPath {
-                view.dateCellTapped(indexPath: previousIndex, selected: false) // unselect another dates cells
-            }
-            previousSelectedCell = indexPath
+            sendRequest(type: model.type)
         }
     }
 }
@@ -90,12 +107,9 @@ extension APODsPresenter {
 
 extension APODsPresenter: APODsModuleInput {
     func setCustomDates(_ model: APODsDatePickerModuleOutputResult) {
-        if let previousIndex = previousSelectedCell {
-            view.dateCellTapped(indexPath: previousIndex, selected: false) // unselect another dates cells
-        }
-        let fromDate = formateDate(date: model.fromDate)
-        let toDate = formateDate(date: model.toDate)
-        view.customDatesCellTapped(fromValue: fromDate, toValue: toDate, selected: true)
+        self.outputDatePickerResult = model
+        view.setLoader(state: true)
+        sendRequest(type: .custom)
     }
 }
 

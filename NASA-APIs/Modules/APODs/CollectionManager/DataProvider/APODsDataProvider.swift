@@ -1,10 +1,7 @@
 
 import Foundation
 
-struct APODsDataProvider {
-    static let mockURL = URL(string: "https://media.cnn.com/api/v1/images/stellar/prod/181115180453-01-mars-best-moments-mars-globe-valles-marineris-enhanced.jpg?q=w_2500,h_1406,x_0,y_0,c_fill")
-    static let mockURL1 = URL(string: "https://adminassets.devops.arabiaweather.com/sites/default/files/field/image/Detecting%20the%20source%20of%20a%20giant%20earthquake%20that%20struck%20Mars%20arabia%20weather.jpg")
-
+class APODsDataProvider {
     var dateSelectSection: APODsSection =
         .init(title: "Pick date",
               items: [
@@ -16,16 +13,53 @@ struct APODsDataProvider {
               ],
               type: .dataSelectType)
 
-    var picturesSection: APODsSection =
+    private(set) var picturesSection: APODsSection =
         .init(title: "",
               items: [
-                .init(type: .imageItemType(type: .init(title: "Test data", imageUrl: mockURL))),
-                .init(type: .imageItemType(type: .init(title: "Test data1", imageUrl: mockURL))),
-                .init(type: .imageItemType(type: .init(title: "Test data2", imageUrl: mockURL))),
-                .init(type: .imageItemType(type: .init(title: "Test data2", imageUrl: mockURL))),
-                .init(type: .imageItemType(type: .init(title: "Test data2", imageUrl: mockURL1))),
-
               ],
               type: .pictures)
 
+    func insertPictureSection(with models: [PODsServiceResponseModel]) {
+        picturesSection.items = []
+        models.forEach {
+            guard let url = URL(string: $0.url) else {
+                assert(false)
+                return
+            }
+            picturesSection.items.append(.init(type: .imageItemType(type: .init(title: $0.title, imageUrl: url))))
+        }
+    }
+
+    func selectDate(with item: APODsCellItem, previousItemIndex: IndexPath) {
+        guard let itemIndex = dateSelectSection.items.firstIndex(where: { $0.id == item.id }) else { return }
+        let item = dateSelectSection.items[itemIndex]
+        switch item.type {
+        case .dataSelectItemType(type: let type):
+            var model = type
+            model.selected = true
+            let updatableItem = APODsCellItem(
+                id: item.id,
+                type: .dataSelectItemType(type: model)
+            )
+            dateSelectSection.items[itemIndex] = updatableItem
+            guard previousItemIndex.row < dateSelectSection.items.count else { return }
+            let previousItem = dateSelectSection.items[previousItemIndex.row]
+            switch previousItem.type {
+
+            case .dataSelectItemType(type: let type):
+                var model = type
+                model.selected = false
+                let updatableItem = APODsCellItem(
+                    id: item.id,
+                    type: .dataSelectItemType(type: model)
+                )
+                dateSelectSection.items[previousItemIndex.row] = updatableItem
+            case .imageItemType:
+                break
+            }
+
+        case .imageItemType:
+            break
+        }
+    }
 }

@@ -13,7 +13,7 @@ class APODsAssembly {
         presenter.interactor = interactor
         interactor.presenter = presenter
         collectionManager.delegate = presenter
-
+        interactor.service = PODsService(networkManager: NetworkManager())
         return (view, presenter)
     }
 
