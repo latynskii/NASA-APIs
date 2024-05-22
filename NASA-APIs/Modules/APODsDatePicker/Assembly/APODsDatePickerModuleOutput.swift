@@ -2,7 +2,7 @@
 import Foundation
 
 protocol APODsDatePickerModuleOutput {
-	var onFinished: ((APODsDatePickerModuleOutputResult) -> Void)? { get set }
+	var onFinished: ((APODsDatePickerModuleOutputResult?) -> Void)? { get set }
 }
 
 struct APODsDatePickerModuleOutputResult {

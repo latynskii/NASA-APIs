@@ -9,10 +9,8 @@ extension APODsInteractor: APODsInteractorInput {
         service.getPODs(with: request) { [weak self] result in
             switch result {
             case .success(let response):
-                print(response)
                 self?.presenter.podsReceivedSuccess(result: response)
             case .failure(let error):
-                print(error)
                 self?.presenter.podsReceiveFailure()
             }
         }

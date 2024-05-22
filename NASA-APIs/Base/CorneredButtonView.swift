@@ -14,6 +14,8 @@ final class CorneredButtonView: UIControl {
         return image
     }()
 
+    var onTap: (() -> Void)?
+
     init(with image: UIImage?) {
         super.init(frame: .zero)
         buttonImage.image = image?.withTintColor(.black, renderingMode: .alwaysTemplate)
@@ -21,6 +23,7 @@ final class CorneredButtonView: UIControl {
         setupConstrains()
         self.layer.cornerRadius = Appearance.viewCornerRadius
         updateUI()
+        addGest()
     }
 
     override var intrinsicContentSize: CGSize {
@@ -41,6 +44,15 @@ final class CorneredButtonView: UIControl {
         }
     }
 
+    private func addGest() {
+        let gest = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        self.addGestureRecognizer(gest)
+    }
+
+    @objc private func tapped() {
+        onTap?()
+    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         isSelected = true
@@ -49,6 +61,7 @@ final class CorneredButtonView: UIControl {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         isSelected = false
+        onTap?()
     }
 
     override var isHighlighted: Bool {

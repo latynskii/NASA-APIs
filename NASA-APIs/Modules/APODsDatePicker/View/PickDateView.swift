@@ -37,10 +37,11 @@ final class PickDateView: UIControl {
         .init(width: 0, height: Appearance.selfHeight)
     }
 
-    init(with config: PickDateViewConfig) {
+    private var onTap: () -> Void
+
+    init(action: @escaping () -> Void) {
+        self.onTap = action
         super.init(frame: .zero)
-        titleLabel.text = config.title
-        dateLabel.text = config.date
         layer.cornerRadius = Appearance.cornerRadius
         setUntappedUI()
         addSubviews()
@@ -72,6 +73,15 @@ final class PickDateView: UIControl {
         (isSelected ? setTappedUI() : setUntappedUI())
     }
 
+    private func addGesture() {
+        let tapGest = UITapGestureRecognizer(target: self, action: #selector(tap))
+        self.addGestureRecognizer(tapGest)
+    }
+
+    @objc private func tap() {
+
+    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         isSelected = true
@@ -79,6 +89,7 @@ final class PickDateView: UIControl {
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
+        onTap()
         isSelected = false
     }
 
@@ -105,6 +116,7 @@ final class PickDateView: UIControl {
     }
 
     func update(with config: PickDateViewConfig) {
+        titleLabel.text = config.title
         dateLabel.text = config.date
     }
 }

@@ -5,5 +5,6 @@ protocol APODsModuleOutput: AnyObject {
 }
 
 protocol APODsModuleInput: AnyObject {
-    func setCustomDates(_ model: APODsDatePickerModuleOutputResult)
+    var selectedCustomDates: APODsDatePickerModuleOutputResult? { get }
+    func setCustomDates(_ model: APODsDatePickerModuleOutputResult?)
 }

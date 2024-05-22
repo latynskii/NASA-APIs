@@ -9,7 +9,7 @@ final class APODsPresenter: APODsModuleOutput {
 
     private var dataProvider = APODsDataProvider()
     private var dateTypeTapped: APODsDateSelectItemModelType?
-    private var outputDatePickerResult: APODsDatePickerModuleOutputResult?
+    var selectedCustomDates: APODsDatePickerModuleOutputResult?
 }
 
 extension APODsPresenter: APODsViewOutput {
@@ -29,12 +29,13 @@ extension APODsPresenter: APODsInteractorOutput {
             guard let self = self else { return }
             guard let dateTypeTapped = dateTypeTapped else { return }
             if dateTypeTapped == .custom {
-                guard let outputDatePickerResult = outputDatePickerResult else { return }
+                guard let selectedCustomDates = selectedCustomDates else { return }
                 view.selectCustomDate(
-                    fromDate: formateDate(date: outputDatePickerResult.fromDate),
-                    lastDate: formateDate(date: outputDatePickerResult.toDate)
+                    fromDate: selectedCustomDates.fromDate.simpleFormat(),
+                    lastDate: selectedCustomDates.toDate.simpleFormat()
                 )
             } else {
+                self.selectedCustomDates = nil // remove custom config
                 view.selectDate(type: dateTypeTapped)
             }
             self.view.setLoader(state: false)
@@ -75,15 +76,12 @@ private extension APODsPresenter {
         case .year:
             interactor.getPods(with: APODsDateRequestMaker.year.request)
         case .custom:
-            guard let outputDatePickerResult = outputDatePickerResult else { return }
-            interactor.getPods(with: APODsDateRequestMaker.custom(outputDatePickerResult).request)
+            guard let selectedCustomDates = selectedCustomDates else { return }
+            interactor.getPods(with: APODsDateRequestMaker.custom(selectedCustomDates).request)
         }
     }
 
     func selectDateTapped(with model: APODsDateSelectItemModel, and indexPath: IndexPath) {
-//        defer {
-//            self.tappedCell = (model.type, indexPath)
-//        }
         self.dateTypeTapped = model.type
         if model.type == .custom {
             onDatePicker?()
@@ -106,17 +104,10 @@ extension APODsPresenter {
 }
 
 extension APODsPresenter: APODsModuleInput {
-    func setCustomDates(_ model: APODsDatePickerModuleOutputResult) {
-        self.outputDatePickerResult = model
+    func setCustomDates(_ model: APODsDatePickerModuleOutputResult?) {
+        guard let model = model else { return }
+        self.selectedCustomDates = model
         view.setLoader(state: true)
         sendRequest(type: .custom)
-    }
-}
-
-private extension APODsPresenter {
-    func formateDate(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        return dateFormatter.string(from: date)
     }
 }

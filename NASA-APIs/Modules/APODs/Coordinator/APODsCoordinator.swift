@@ -17,9 +17,14 @@ final class APODsCoordinator: BaseCoordinatorProtocol {
             self?.moduleClosed?()
         }
         module.module.onDatePicker = { [weak self] in
+            let config = PODsDatePickerConfig(
+                fromDate: input.selectedCustomDates?.fromDate,
+                untilDate: input.selectedCustomDates?.toDate
+            )
             self?.showDatePickerView(
                 for: module.view,
-                onModuleFinished: { [weak input]  result in
+                with: config,
+                onModuleFinished: { [weak input] result in
                     input?.setCustomDates(result)
                 }
             )
@@ -29,16 +34,19 @@ final class APODsCoordinator: BaseCoordinatorProtocol {
 
     func showDatePickerView(
         for view: UIViewController?,
-        onModuleFinished: @escaping (APODsDatePickerModuleOutputResult) -> Void
+        with config: PODsDatePickerConfig,
+        onModuleFinished: @escaping (APODsDatePickerModuleOutputResult?) -> Void
     ) {
-        var module = APODsDatePickerAssembly.assemble()
+        var module = APODsDatePickerAssembly.assemble(with: config)
         module.view.modalPresentationStyle = .pageSheet
         if let sheet = module.view.sheetPresentationController {
             sheet.detents = [.medium()]
             sheet.prefersGrabberVisible = true
         }
         module.output.onFinished = { result in
-            onModuleFinished(result)
+            module.view.dismiss(animated: true) {
+                onModuleFinished(result)
+            }
         }
         view?.present(module.view, animated: true)
     }
