@@ -58,5 +58,6 @@ final class MainImageCell: UICollectionViewCell {
 
     func set(title: String) {
         self.title.text = title
+        layoutIfNeeded()
     }
 }

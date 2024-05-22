@@ -15,7 +15,7 @@ final class APODsViewController: BaseViewController {
             collectionViewLayout: UICollectionViewLayout()
         )
         collection.backgroundColor = Appearance.backgroundColor
-        collection.contentInset.bottom = 40
+        collection.contentInset.bottom = 100
         return collection
     }()
 
