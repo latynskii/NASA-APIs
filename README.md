@@ -9,9 +9,6 @@ API:
 Archtecture:
 - MVP + C
 
-  ![Simulator Screenshot - IPhone 15 - 2024-05-23 at 17 53 04](https://github.com/latynskii/NASA-APIs/assets/92750528/1d17118d-45dd-40b4-b3e8-0c974c044125)
-
-![Simulator Screenshot - IPhone 15 - 2024-05-23 at 17 53 12](https://github.com/latynskii/NASA-APIs/assets/92750528/90a9222b-f397-479e-8869-de0805e64cd6)
-
-
-![Simulator Screenshot - IPhone 15 - 2024-05-23 at 17 53 20](https://github.com/latynskii/NASA-APIs/assets/92750528/92b9c288-1ea7-4e34-a64f-e5c9c0bdfdae)
+| main screen  | loading | details |
+| ------------- | ------------- | ------------- |
+| ![main](https://github.com/latynskii/NASA-APIs/assets/92750528/a428a084-574d-4257-aaef-ce34660d48fc)  |  ![loading](https://github.com/latynskii/NASA-APIs/assets/92750528/707fc782-5183-42d5-829b-ac128f086665)  | ![details](https://github.com/latynskii/NASA-APIs/assets/92750528/ac31f8d2-dc0f-4b4b-8c89-a437fe52ef91) |
