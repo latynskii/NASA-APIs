@@ -9,7 +9,7 @@ API:
  - https://api.nasa.gov/   
 
 Archtecture:
-- MVP + C
+- VIP + C
 
 | main screen  | loading | details |
 | ------------- | ------------- | ------------- |
