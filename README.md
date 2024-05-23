@@ -1,7 +1,9 @@
 Compositional layout architecture demosntration
+
 Frameworks:
 - Snapkit
 - Kingfisher
+- Generamba
 
 API:
  - https://api.nasa.gov/   
