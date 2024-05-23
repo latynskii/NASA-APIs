@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		018BF0DAA77D07A0CBAD8B9C /* APIListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58894CAAD0DFD274B5A14A1 /* APIListInteractorOutput.swift */; };
+		02E115590267E59E2D15E977 /* PodDetailsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6065414328348CD65AB08D9 /* PodDetailsViewInput.swift */; };
 		0AD2DA0806923800476DF3F2 /* APODsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62B611A603FFA4E2B3EF527 /* APODsAssembly.swift */; };
 		1699631156A8CCB1C882D6C9 /* APIListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052696C85BDF3840C2C7BB2F /* APIListViewInput.swift */; };
+		17F5D4642584257BF66F08F3 /* PodDetailsModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B903A19DB48DEB5AF472D601 /* PodDetailsModuleOutput.swift */; };
+		1AEC199295257EBA4EDF43D8 /* PodDetailsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34ED11422A445DE483B52B /* PodDetailsViewOutput.swift */; };
 		1E83448978ABA91F46A04AF0 /* APODsDatePickerViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A895C9C3DE83511293D9D /* APODsDatePickerViewOutput.swift */; };
 		232753752BC6AAB70036A15E /* APODsCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232753742BC6AAB70036A15E /* APODsCollectionViewManager.swift */; };
 		232753922BC6C4770036A15E /* APODsSelectDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232753912BC6C4770036A15E /* APODsSelectDateCell.swift */; };
@@ -17,6 +20,9 @@
 		232753982BC7C2320036A15E /* APODsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232753972BC7C2320036A15E /* APODsSection.swift */; };
 		2327539C2BC7C2C00036A15E /* APODsCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327539B2BC7C2C00036A15E /* APODsCellItem.swift */; };
 		2327539E2BC807960036A15E /* APODsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327539D2BC807960036A15E /* APODsDataProvider.swift */; };
+		2329890E2BFF5CC90020F0D4 /* PodDetailImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2329890D2BFF5CC90020F0D4 /* PodDetailImageCell.swift */; };
+		232989112BFF60100020F0D4 /* PodDetailsTableDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232989102BFF60100020F0D4 /* PodDetailsTableDataType.swift */; };
+		232989142BFF60EF0020F0D4 /* PodDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232989132BFF60EF0020F0D4 /* PodDetailTextCell.swift */; };
 		236803BB2BD2B917005312C2 /* APODCustomDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236803BA2BD2B917005312C2 /* APODCustomDateCell.swift */; };
 		236803C02BD59CD6005312C2 /* MainImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236803BF2BD59CD6005312C2 /* MainImageCell.swift */; };
 		236803C32BD5A0E8005312C2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 236803C22BD5A0E8005312C2 /* Kingfisher */; };
@@ -43,6 +49,7 @@
 		3B5B096A6BF78401C833E273 /* APIListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */; };
 		3D79B20CFDDAA3FD03727957 /* APODsDatePickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B4DE6CCB8E87A0EA24B09 /* APODsDatePickerInteractor.swift */; };
 		41B272E6471878F3D7FE49B7 /* APODsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7ACE40A2AFCD11C23C207 /* APODsPresenter.swift */; };
+		448000F0EBE15DC9C7106437 /* PodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D4E720B44E634F2ED583EC /* PodDetailsViewController.swift */; };
 		455048DDCA4F55FE42D2CA50 /* APODsDatePickerModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2074CF1C6CCD9B527A9F02FC /* APODsDatePickerModuleOutput.swift */; };
 		466C1CE6F2D170AA4CC8F31F /* APIListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C83A6E37181A58ED4223291 /* APIListPresenter.swift */; };
 		47FCA46B3E0DEF1D07A64370 /* APODsDatePickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D57A168DB2C239D3EC2B57 /* APODsDatePickerPresenter.swift */; };
@@ -56,12 +63,17 @@
 		917B9A7A86A485B15BEAF1BB /* APIListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C989DF38802ECF09794E21D /* APIListInteractor.swift */; };
 		B06B4C4C5A6A8CDB41776696 /* APODsDatePickerInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C862090D17CC0F20B5BF79F /* APODsDatePickerInteractorInput.swift */; };
 		B767420D20D21B46363E3970 /* APODsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C61D782A63D181CF493D64 /* APODsInteractorInput.swift */; };
+		B7852C5A24CB106F3B039CCC /* PodDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A707171E849FFD9A1165F /* PodDetailsAssembly.swift */; };
 		C2443F08AB16E1B6B95B9D35 /* APODsDatePickerInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484C8DD82D38E2EF9A99A6C /* APODsDatePickerInteractorOutput.swift */; };
 		C5217B7D546EFE406C6879B3 /* APODsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0618CD7C89E6A89FA2576E9 /* APODsViewController.swift */; };
 		C57B539BF88CB328F0AFF0D2 /* APODsDatePickerViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D65B33BAFDB0133E543E0 /* APODsDatePickerViewInput.swift */; };
+		CEF183E679FDE2BA1E811ED4 /* PodDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9613B0D7F899482E98241EC /* PodDetailsPresenter.swift */; };
 		D308F3490B91FF108B1048A8 /* APODsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE26B841BA100C21076B4B7 /* APODsInteractorOutput.swift */; };
+		D41817117A2ACFE430FB0712 /* PodDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EF9F0E2CD3439EAAE5DAB5 /* PodDetailsInteractor.swift */; };
 		D698DD4ED67FE023B6F72201 /* APODsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F183C1653D1A16B9ECD8878F /* APODsViewInput.swift */; };
+		DEA2169F136597DDD0B1C267 /* PodDetailsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534FB566D7C3FAE28B22865 /* PodDetailsInteractorOutput.swift */; };
 		E3BE5580C90FCCA05442D98F /* APIListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCA99D0DA2E0826F052FCF /* APIListInteractorInput.swift */; };
+		E81348E30AF90A1007E4BF03 /* PodDetailsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14A1BD0FE4A4B64BCF26836 /* PodDetailsInteractorInput.swift */; };
 		E83C101BCE7C58F3EE284CF8 /* APODsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068A5E937C54A1353E64E480 /* APODsViewOutput.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +88,9 @@
 		232753972BC7C2320036A15E /* APODsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsSection.swift; sourceTree = "<group>"; };
 		2327539B2BC7C2C00036A15E /* APODsCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsCellItem.swift; sourceTree = "<group>"; };
 		2327539D2BC807960036A15E /* APODsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODsDataProvider.swift; sourceTree = "<group>"; };
+		2329890D2BFF5CC90020F0D4 /* PodDetailImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodDetailImageCell.swift; sourceTree = "<group>"; };
+		232989102BFF60100020F0D4 /* PodDetailsTableDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodDetailsTableDataType.swift; sourceTree = "<group>"; };
+		232989132BFF60EF0020F0D4 /* PodDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodDetailTextCell.swift; sourceTree = "<group>"; };
 		236803BA2BD2B917005312C2 /* APODCustomDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODCustomDateCell.swift; sourceTree = "<group>"; };
 		236803BF2BD59CD6005312C2 /* MainImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainImageCell.swift; sourceTree = "<group>"; };
 		236803E32BD79ECA005312C2 /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
@@ -99,11 +114,14 @@
 		23DFA85F2BFC8C14006682BB /* CorneredButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorneredButtonView.swift; sourceTree = "<group>"; };
 		23DFA87B2BFC93CC006682BB /* PickDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDateView.swift; sourceTree = "<group>"; };
 		23DFA87D2BFCA043006682BB /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
+		24EF9F0E2CD3439EAAE5DAB5 /* PodDetailsInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PodDetailsInteractor.swift; sourceTree = "<group>"; };
 		2C9FBB02E52A85FFC6E18E4E /* APIListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewOutput.swift; sourceTree = "<group>"; };
+		2F8A707171E849FFD9A1165F /* PodDetailsAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PodDetailsAssembly.swift; sourceTree = "<group>"; };
 		3F32AE7EB9C13AD3D4D1C4EA /* APODsDatePickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerViewController.swift; sourceTree = "<group>"; };
 		401F6258642A4818584D65F6 /* APODsDatePickerAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerAssembly.swift; sourceTree = "<group>"; };
 		4C862090D17CC0F20B5BF79F /* APODsDatePickerInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerInteractorInput.swift; sourceTree = "<group>"; };
 		4EE7ACE40A2AFCD11C23C207 /* APODsPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsPresenter.swift; sourceTree = "<group>"; };
+		6534FB566D7C3FAE28B22865 /* PodDetailsInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PodDetailsInteractorOutput.swift; sourceTree = "<group>"; };
 		76C61D782A63D181CF493D64 /* APODsInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsInteractorInput.swift; sourceTree = "<group>"; };
 		7A3E64887677CBC0D2751958 /* APIListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListViewController.swift; sourceTree = "<group>"; };
 		867D65B33BAFDB0133E543E0 /* APODsDatePickerViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerViewInput.swift; sourceTree = "<group>"; };
@@ -114,13 +132,19 @@
 		9D0152B8E504B4FBC2C21781 /* APIListModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListModuleOutput.swift; sourceTree = "<group>"; };
 		A0618CD7C89E6A89FA2576E9 /* APODsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsViewController.swift; sourceTree = "<group>"; };
 		A17A895C9C3DE83511293D9D /* APODsDatePickerViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerViewOutput.swift; sourceTree = "<group>"; };
+		B1D4E720B44E634F2ED583EC /* PodDetailsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PodDetailsViewController.swift; sourceTree = "<group>"; };
+		B903A19DB48DEB5AF472D601 /* PodDetailsModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PodDetailsModuleOutput.swift; sourceTree = "<group>"; };
+		BF34ED11422A445DE483B52B /* PodDetailsViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PodDetailsViewOutput.swift; sourceTree = "<group>"; };
+		C14A1BD0FE4A4B64BCF26836 /* PodDetailsInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PodDetailsInteractorInput.swift; sourceTree = "<group>"; };
 		DE2B4DE6CCB8E87A0EA24B09 /* APODsDatePickerInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsDatePickerInteractor.swift; sourceTree = "<group>"; };
 		E1FCA99D0DA2E0826F052FCF /* APIListInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListInteractorInput.swift; sourceTree = "<group>"; };
 		E8F747E3ECF90E41498B5973 /* APODsModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsModuleOutput.swift; sourceTree = "<group>"; };
 		F183C1653D1A16B9ECD8878F /* APODsViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsViewInput.swift; sourceTree = "<group>"; };
 		F2105377EBFDF45461C881B3 /* APIListAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListAssembly.swift; sourceTree = "<group>"; };
 		F58894CAAD0DFD274B5A14A1 /* APIListInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIListInteractorOutput.swift; sourceTree = "<group>"; };
+		F6065414328348CD65AB08D9 /* PodDetailsViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PodDetailsViewInput.swift; sourceTree = "<group>"; };
 		F62B611A603FFA4E2B3EF527 /* APODsAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsAssembly.swift; sourceTree = "<group>"; };
+		F9613B0D7F899482E98241EC /* PodDetailsPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PodDetailsPresenter.swift; sourceTree = "<group>"; };
 		FFE26B841BA100C21076B4B7 /* APODsInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APODsInteractorOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +171,18 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		0D1A276EBB3139DEDA533CAF /* PodDetails */ = {
+			isa = PBXGroup;
+			children = (
+				22F3DD07BB2396C392ED003B /* View */,
+				DD6AD19E336213416BB1E3FA /* Presenter */,
+				90C21416692D9577D460C4F9 /* Interactor */,
+				56403EAD14E9AAEF277F1321 /* Assembly */,
+				232989122BFF602A0020F0D4 /* Models */,
+			);
+			path = PodDetails;
+			sourceTree = "<group>";
+		};
 		1629D8E04B358DD509C22302 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +190,16 @@
 				E8F747E3ECF90E41498B5973 /* APODsModuleOutput.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		22F3DD07BB2396C392ED003B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6065414328348CD65AB08D9 /* PodDetailsViewInput.swift */,
+				B1D4E720B44E634F2ED583EC /* PodDetailsViewController.swift */,
+				2329890F2BFF5FFE0020F0D4 /* Cells */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		232753762BC6AAED0036A15E /* CollectionManager */ = {
@@ -201,6 +247,23 @@
 				2327539D2BC807960036A15E /* APODsDataProvider.swift */,
 			);
 			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		2329890F2BFF5FFE0020F0D4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2329890D2BFF5CC90020F0D4 /* PodDetailImageCell.swift */,
+				232989132BFF60EF0020F0D4 /* PodDetailTextCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		232989122BFF602A0020F0D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				232989102BFF60100020F0D4 /* PodDetailsTableDataType.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2372548C2BD8102B008D1E82 /* NetworkLayer */ = {
@@ -299,6 +362,7 @@
 				2F09D86F58A3031B65A8EBD3 /* APIList */,
 				83EEB33B3271BDAB5572ABF6 /* APODs */,
 				336C6FD4F905D65ED3469FD6 /* APODsDatePicker */,
+				0D1A276EBB3139DEDA533CAF /* PodDetails */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -380,6 +444,15 @@
 			path = APODsDatePicker;
 			sourceTree = "<group>";
 		};
+		56403EAD14E9AAEF277F1321 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				2F8A707171E849FFD9A1165F /* PodDetailsAssembly.swift */,
+				B903A19DB48DEB5AF472D601 /* PodDetailsModuleOutput.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		83EEB33B3271BDAB5572ABF6 /* APODs */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +474,15 @@
 				2074CF1C6CCD9B527A9F02FC /* APODsDatePickerModuleOutput.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		90C21416692D9577D460C4F9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C14A1BD0FE4A4B64BCF26836 /* PodDetailsInteractorInput.swift */,
+				24EF9F0E2CD3439EAAE5DAB5 /* PodDetailsInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		998CE14DD2954B9569A578D2 /* Presenter */ = {
@@ -448,6 +530,16 @@
 				DE2B4DE6CCB8E87A0EA24B09 /* APODsDatePickerInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DD6AD19E336213416BB1E3FA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F9613B0D7F899482E98241EC /* PodDetailsPresenter.swift */,
+				6534FB566D7C3FAE28B22865 /* PodDetailsInteractorOutput.swift */,
+				BF34ED11422A445DE483B52B /* PodDetailsViewOutput.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		E049EFA16C1133A0CBB24004 /* View */ = {
@@ -561,6 +653,7 @@
 				236803E42BD79ECA005312C2 /* BottomBarView.swift in Sources */,
 				232753982BC7C2320036A15E /* APODsSection.swift in Sources */,
 				23A75C152BBAD20800DA276D /* APIListCellModel.swift in Sources */,
+				2329890E2BFF5CC90020F0D4 /* PodDetailImageCell.swift in Sources */,
 				23BFB6FC2BD8FBF500BBAF6F /* APODsDateRequestMaker.swift in Sources */,
 				2372548B2BD81022008D1E82 /* NetworkManager.swift in Sources */,
 				23A75BDA2BB993A200DA276D /* MainCoordinator.swift in Sources */,
@@ -569,6 +662,7 @@
 				23A75BBD2BB9756800DA276D /* AppDelegate.swift in Sources */,
 				23A75BBF2BB9756800DA276D /* SceneDelegate.swift in Sources */,
 				23A75C312BBADBB700DA276D /* BaseViewController.swift in Sources */,
+				232989142BFF60EF0020F0D4 /* PodDetailTextCell.swift in Sources */,
 				23DFA85D2BFC8A22006682BB /* UIFont + Extension.swift in Sources */,
 				1699631156A8CCB1C882D6C9 /* APIListViewInput.swift in Sources */,
 				5695CD205D03263BEFABE6D1 /* APIListViewController.swift in Sources */,
@@ -579,6 +673,7 @@
 				3B5B096A6BF78401C833E273 /* APIListViewOutput.swift in Sources */,
 				23DFA87C2BFC93CC006682BB /* PickDateView.swift in Sources */,
 				23DFA8602BFC8C14006682BB /* CorneredButtonView.swift in Sources */,
+				232989112BFF60100020F0D4 /* PodDetailsTableDataType.swift in Sources */,
 				2327539E2BC807960036A15E /* APODsDataProvider.swift in Sources */,
 				236803BB2BD2B917005312C2 /* APODCustomDateCell.swift in Sources */,
 				E3BE5580C90FCCA05442D98F /* APIListInteractorInput.swift in Sources */,
@@ -609,6 +704,15 @@
 				3D79B20CFDDAA3FD03727957 /* APODsDatePickerInteractor.swift in Sources */,
 				5C52F1AB415B899332E369D6 /* APODsDatePickerAssembly.swift in Sources */,
 				455048DDCA4F55FE42D2CA50 /* APODsDatePickerModuleOutput.swift in Sources */,
+				02E115590267E59E2D15E977 /* PodDetailsViewInput.swift in Sources */,
+				448000F0EBE15DC9C7106437 /* PodDetailsViewController.swift in Sources */,
+				CEF183E679FDE2BA1E811ED4 /* PodDetailsPresenter.swift in Sources */,
+				DEA2169F136597DDD0B1C267 /* PodDetailsInteractorOutput.swift in Sources */,
+				1AEC199295257EBA4EDF43D8 /* PodDetailsViewOutput.swift in Sources */,
+				E81348E30AF90A1007E4BF03 /* PodDetailsInteractorInput.swift in Sources */,
+				D41817117A2ACFE430FB0712 /* PodDetailsInteractor.swift in Sources */,
+				B7852C5A24CB106F3B039CCC /* PodDetailsAssembly.swift in Sources */,
+				17F5D4642584257BF66F08F3 /* PodDetailsModuleOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

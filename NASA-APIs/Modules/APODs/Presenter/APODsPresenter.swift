@@ -1,8 +1,10 @@
 import Foundation
 final class APODsPresenter: APODsModuleOutput {
+
     // MARK: - Output
     var onDatePicker: (() -> Void)?
     var onFinished: (() -> Void)?
+    var onDetails: ((PodDetailsConfig) -> Void)?
 
     weak var view: APODsViewInput!
     var interactor: APODsInteractorInput!
@@ -59,7 +61,7 @@ extension APODsPresenter: APODsCollectionViewManagerDelegate {
         case .dataSelectItemType(type: let model):
             selectDateTapped(with: model, and: indexPath)
         case .imageItemType(type: let model):
-           print(model)
+            self.onDetails?(PodDetailsConfig(imageUrl: model.imageUrl, title: model.title, body: model.bodyText))
         }
     }
 }

@@ -12,6 +12,7 @@ final class APODsCoordinator: BaseCoordinatorProtocol {
     func start() {
         let module = APODsAssembly.assemble()
         let input = module.module
+        let view =  module.view
         module.module.onFinished = { [weak self] in
             module.view.dismiss(animated: true)
             self?.moduleClosed?()
@@ -29,7 +30,10 @@ final class APODsCoordinator: BaseCoordinatorProtocol {
                 }
             )
         }
-        present(presentedView: presentedView, presentingView: module.view)
+        module.module.onDetails = { [weak self] config in
+            self?.showDetails(for: view, with: config)
+        }
+        present(presentedView: presentedView, presentingView: view)
     }
 
     func showDatePickerView(
@@ -49,6 +53,16 @@ final class APODsCoordinator: BaseCoordinatorProtocol {
             }
         }
         view?.present(module.view, animated: true)
+    }
+
+    func showDetails(for view: UIViewController, with config: PodDetailsConfig) {
+        let module = PodDetailsAssembly.assemble(with: config)
+        let detailsView = module.view
+        let moduleOutput = module.output
+        moduleOutput.onFinished = { [weak detailsView] in
+            detailsView?.dismiss(animated: true)
+        }
+        present(presentedView: view, presentingView: detailsView)
     }
 }
 

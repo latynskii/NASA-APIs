@@ -2,6 +2,7 @@
 protocol APODsModuleOutput: AnyObject {
 	var onFinished: (() -> Void)? { get set }
     var onDatePicker: (() -> Void)? { get set }
+    var onDetails: ((PodDetailsConfig) -> Void)? { get set }
 }
 
 protocol APODsModuleInput: AnyObject {

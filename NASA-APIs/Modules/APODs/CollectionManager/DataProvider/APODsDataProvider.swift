@@ -26,7 +26,10 @@ class APODsDataProvider {
                 assert(false)
                 return
             }
-            picturesSection.items.append(.init(type: .imageItemType(type: .init(title: $0.title, imageUrl: url))))
+            picturesSection.items.append(.init(
+                type: .imageItemType(type: .init(title: $0.title, bodyText: $0.explanation ?? "",
+                                                 imageUrl: url)))
+            )
         }
     }
 

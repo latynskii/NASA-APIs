@@ -10,6 +10,7 @@ final class CorneredButtonView: UIControl {
 
     private lazy var buttonImage: UIImageView = {
         let image = UIImageView()
+        image.contentMode = .scaleAspectFit
         image.tintColor = .black
         return image
     }()

@@ -39,6 +39,7 @@ struct APODsDateSelectItemModel: Hashable {
 struct APODsImageItemModel: Hashable {
     let id = UUID()
     let title: String
+    let bodyText: String
     let imageUrl: URL?
 }
 

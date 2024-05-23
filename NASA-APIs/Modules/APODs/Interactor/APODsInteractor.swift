@@ -10,7 +10,7 @@ extension APODsInteractor: APODsInteractorInput {
             switch result {
             case .success(let response):
                 self?.presenter.podsReceivedSuccess(result: response)
-            case .failure(let error):
+            case .failure:
                 self?.presenter.podsReceiveFailure()
             }
         }
